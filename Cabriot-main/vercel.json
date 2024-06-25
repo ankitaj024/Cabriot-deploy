@@ -1,9 +1,9 @@
 {
     "rewrites": [
-      { "source": "https://cabriot-deploy.vercel.app/eat", "destination": "https://cabriot-deploy.vercel.app/eat.html" },
-      { "source": "https://cabriot-deploy.vercel.app/go", "destination": "https://cabriot-deploy.vercel.app/go.html" },
-      { "source": "https://cabriot-deploy.vercel.app/xpress", "destination": "https://cabriot-deploy.vercel.app/xpress.html" },
-      { "source": "https://cabriot-deploy.vercel.app/stay", "destination": "https://cabriot-deploy.vercel.app/stay.html" }
+      { "source": "/eat", "destination": "/eat.html" },
+      { "source": "/stay", "destination": "/stay.html" },
+      { "source": "/go", "destination": "/go.html" },
+      { "source": "/xpress", "destination": "/xpress.html" }
     ]
   }
   
