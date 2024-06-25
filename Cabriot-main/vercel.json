@@ -1,9 +1,6 @@
 {
     "rewrites": [
-      { "source": "/eat", "destination": "/eat.html" },
-      { "source": "/go", "destination": "/go.html" },
-      { "source": "/stay", "destination": "/stay.html" },
-      { "source": "/xpress", "destination": "/xpress.html" }
+      { "source": "/eat", "destination": "/eat.html" }
     ]
   }
   
