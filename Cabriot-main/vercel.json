@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/eat", "destination": "/eat.html" }
+      { "source": "https://cabriot-deploy.vercel.app/eat", "destination": "https://cabriot-deploy.vercel.app/eat.html" }
     ]
   }
   
