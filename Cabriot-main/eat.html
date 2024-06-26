@@ -41,19 +41,23 @@
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
+                cursor: pointer; /* Ensure pointer cursor for clickable items */
+                z-index: 10; /* Ensure indicators are above other content */
             }
-    
+            
             .carousel-indicators .active {
                 background-color: #fff;
             }
-    
+            
             .carousel-control-prev-icon,
             .carousel-control-next-icon {
                 background-color: rgba(0, 0, 0, 0.5);
                 border-radius: 50%;
                 padding: 10px;
+                cursor: pointer; /* Ensure pointer cursor for controls */
+                z-index: 10; /* Ensure controls are above other content */
             }
-        
+            
             @media (max-width: 768px) {
                 .carousel-item {
                     min-height: auto; /* Revert to auto height for smaller screens */
@@ -64,7 +68,12 @@
                     align-items: center;
                     text-align: center;
                 }
+                .carousel-item img {
+                    width: 300px;
+                    height: 290px;
+                }
             }
+            
         </style>
     <!-- SEO -->
     <meta name="description"
