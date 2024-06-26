@@ -47,7 +47,7 @@ l
             font-size: 2rem; /* Increase font size */
             color: #fff; /* Text color */
         }
-
+    
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for arrows */
@@ -55,6 +55,7 @@ l
             padding: 10px; /* Padding for icon */
         }
 
+        
         /* Adjust arrow position on smaller screens */
         @media (max-width: 768px) {
             .carousel-control-prev,
@@ -62,8 +63,12 @@ l
                 font-size: 1.5rem; /* Decrease font size for smaller screens */
             }
         }
+    
+        /* Set the height of carousel items */
+        .carousel-item {
+            height: 500px; /* Adjust height as per your first slide */
+        }
     </style>
-
     <!-- SEO -->
     <meta name="description"
         content="Elevate your dining experience with Cabriot Eat, India's first mess app offering customizable meal plans for corporate and individual users. Choose from diverse cuisines, tailor your plans, and savor culinary excellence with real-time order tracking and flexible delivery options.">
@@ -116,7 +121,7 @@ l
             <div class="carousel-inner">
                 <!-- Slide 1: Main content -->
                 <div class="carousel-item active">
-                    <div class="container px-5">
+                    <div class="container px-5" style="height: 500px;"> <!-- Adjust height as needed -->
                         <div class="row gx-5 align-items-center">
                             <div class="col-lg-6 container">
                                 <div class="mb-5 mb-lg-0 text-lg-start eat-home">
@@ -156,19 +161,21 @@ l
     
                 <!-- Slide 2: Authentic cuisines with image on the right -->
                 <div class="carousel-item">
-                    <div class="container px-5">
+                    <div class="container px-5" style="height: 500px;"> <!-- Adjust height as needed -->
                         <div class="row gx-5 align-items-center">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6"> 
+                              
                                 <h1>Authentic Cuisines</h1>
+                                
                                 <p class="lead">Explore a delightful array of authentic cuisines from around the world,
                                     each dish a testament to rich culinary traditions and unique flavors. Whether you
                                     crave the spicy warmth of Indian curries, the delicate artistry of Japanese sushi, or
                                     the robust simplicity of Italian pasta, our menu promises a journey through diverse
                                     cultures and tastes. Indulge in dishes crafted with passion and authenticity, offering
                                     you a true taste of global gastronomy right at your fingertips.</p>
-                                <!-- Additional paragraph content -->
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 p-5">
+
                                 <img src="./assets/img/Slide2.png" class="d-block w-100 rounded-circle"
                                     alt="Authentic Cuisines">
                             </div>
@@ -178,9 +185,10 @@ l
     
                 <!-- Slide 3: Hygienic Food -->
                 <div class="carousel-item">
-                    <div class="container px-5">
+                    <div class="container px-5" style="height: 500px;"> <!-- Adjust height as needed -->
                         <div class="row gx-5 align-items-center">
                             <div class="col-lg-6">
+                                
                                 <h1>Hygienic Food</h1>
                                 <p class="lead">At Cabriot Eat, we prioritize your health and safety with uncompromising
                                     standards of hygiene. Our commitment to cleanliness begins from sourcing the freshest
@@ -190,9 +198,8 @@ l
                                     through our platform is crafted with meticulous care and attention to hygiene,
                                     guaranteeing a dining experience that's not only delicious but also safe and
                                     trustworthy.</p>
-                                <!-- Additional paragraph content -->
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 p-5">
                                 <img src="./assets/img/food hygiene.jpg" class="d-block w-100 rounded-circle"
                                     alt="Hygienic Food">
                             </div>
@@ -202,9 +209,10 @@ l
     
                 <!-- Slide 4: Delivery Services -->
                 <div class="carousel-item">
-                    <div class="container px-5">
+                    <div class="container px-5" style="height: 500px;"> <!-- Adjust height as needed -->
                         <div class="row gx-5 align-items-center">
                             <div class="col-lg-6">
+                              
                                 <h1>Delivery Services</h1>
                                 <p class="lead">Enjoy the convenience of doorstep delivery with Cabriot Eat. Our efficient
                                     delivery service ensures that your favorite meals are delivered fresh and on time,
@@ -212,9 +220,8 @@ l
                                     cozy dinner at home, our dedicated team ensures prompt and reliable delivery, so you can
                                     savor your meal without hassle. With real-time tracking and friendly delivery personnel,
                                     we strive to make your dining experience seamless and enjoyable, wherever you are.</p>
-                                <!-- Additional paragraph content -->
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 p-5">
                                 <img src="./assets/img/dilivery.jpg" class="d-block w-100 rounded-circle"
                                     alt="Delivery Services">
                             </div>
@@ -256,7 +263,7 @@ l
                                     and daily dining needs.
                                 </p>
                             </div>
-                            <div class="col-12 col-lg-3 pr-md-3 pr-lg-0 mb-4 mt-2">
+                            <div class="col-12 col-lg-3 pr-md-3 pr-lg-0 mb-4 mt-2 ">
                                 <img src="./assets/eat-orders/1Budget.png" class="img-fluid" alt="" />
                             </div>
 
