@@ -11090,6 +11090,7 @@ html {
   content: "";
   background-image: url("../assets/img/cabriot_eat.png");
 }
+
 .device-stay[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
   content: "";
   background-image: url("../assets/img/cabriot_stay.png");
@@ -12681,3 +12682,4 @@ color: #FFFFFF;
     color: green;
   }
 }
+
