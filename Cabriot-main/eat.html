@@ -34,6 +34,35 @@ l
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        /* Custom CSS to adjust carousel control arrows */
+        .carousel-control-prev,
+        .carousel-control-next {
+            z-index: 1; /* Ensure controls are above other elements */
+            background-color: transparent; /* Transparent background */
+            width: auto; /* Adjust width as needed */
+            height: auto; /* Adjust height as needed */
+            top: 50%; /* Position at center vertically */
+            transform: translateY(-50%); /* Center vertically */
+            font-size: 2rem; /* Increase font size */
+            color: #fff; /* Text color */
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for arrows */
+            border-radius: 50%; /* Rounded shape */
+            padding: 10px; /* Padding for icon */
+        }
+
+        /* Adjust arrow position on smaller screens */
+        @media (max-width: 768px) {
+            .carousel-control-prev,
+            .carousel-control-next {
+                font-size: 1.5rem; /* Decrease font size for smaller screens */
+            }
+        }
+    </style>
 
     <!-- SEO -->
     <meta name="description"
@@ -74,6 +103,16 @@ l
     <!-- Mashead header-->
     <header class="masthead home-background">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
             <div class="carousel-inner">
                 <!-- Slide 1: Main content -->
                 <div class="carousel-item active">
@@ -114,7 +153,7 @@ l
                         </div>
                     </div>
                 </div>
-
+    
                 <!-- Slide 2: Authentic cuisines with image on the right -->
                 <div class="carousel-item">
                     <div class="container px-5">
@@ -123,66 +162,67 @@ l
                                 <h1>Authentic Cuisines</h1>
                                 <p class="lead">Explore a delightful array of authentic cuisines from around the world,
                                     each dish a testament to rich culinary traditions and unique flavors. Whether you
-                                    crave the spicy warmth of Indian curries, the delicate artistry of Japanese sushi,
-                                    or the robust simplicity of Italian pasta, our menu promises a journey through
-                                    diverse cultures and tastes. Indulge in dishes crafted with passion and
-                                    authenticity, offering you a true taste of global gastronomy right at your
-                                    fingertips.</p>
+                                    crave the spicy warmth of Indian curries, the delicate artistry of Japanese sushi, or
+                                    the robust simplicity of Italian pasta, our menu promises a journey through diverse
+                                    cultures and tastes. Indulge in dishes crafted with passion and authenticity, offering
+                                    you a true taste of global gastronomy right at your fingertips.</p>
                                 <!-- Additional paragraph content -->
                             </div>
                             <div class="col-lg-6">
-                                <img src="./assets/img/Slide2.png" class="d-block w-100" alt="Authentic Cuisines">
+                                <img src="./assets/img/Slide2.png" class="d-block w-100 rounded-circle"
+                                    alt="Authentic Cuisines">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 3-->
-
+    
+                <!-- Slide 3: Hygienic Food -->
                 <div class="carousel-item">
                     <div class="container px-5">
                         <div class="row gx-5 align-items-center">
                             <div class="col-lg-6">
-                                <h1>Hygenic Food</h1>
+                                <h1>Hygienic Food</h1>
                                 <p class="lead">At Cabriot Eat, we prioritize your health and safety with uncompromising
-                                    standards of hygiene. Our commitment to cleanliness begins from sourcing the
-                                    freshest ingredients to maintaining stringent sanitation practices in our kitchens.
-                                    We adhere to rigorous food safety protocols and regularly undergo thorough
-                                    inspections to ensure compliance with industry standards. Rest assured, every meal
-                                    prepared and delivered through our platform is crafted with meticulous care and
-                                    attention to hygiene, guaranteeing a dining experience that's not only delicious but
-                                    also safe and trustworthy.</p>
+                                    standards of hygiene. Our commitment to cleanliness begins from sourcing the freshest
+                                    ingredients to maintaining stringent sanitation practices in our kitchens. We adhere to
+                                    rigorous food safety protocols and regularly undergo thorough inspections to ensure
+                                    compliance with industry standards. Rest assured, every meal prepared and delivered
+                                    through our platform is crafted with meticulous care and attention to hygiene,
+                                    guaranteeing a dining experience that's not only delicious but also safe and
+                                    trustworthy.</p>
                                 <!-- Additional paragraph content -->
                             </div>
                             <div class="col-lg-6">
-                                <img src="./assets/img/food hygiene.jpg" class="d-block w-100" alt="Authentic Cuisines">
+                                <img src="./assets/img/food hygiene.jpg" class="d-block w-100 rounded-circle"
+                                    alt="Hygienic Food">
                             </div>
                         </div>
                     </div>
                 </div>
-  
-                 <!-- Slide 4-->
+    
+                <!-- Slide 4: Delivery Services -->
                 <div class="carousel-item">
                     <div class="container px-5">
                         <div class="row gx-5 align-items-center">
                             <div class="col-lg-6">
                                 <h1>Delivery Services</h1>
-                                <p class="lead">Enjoy the convenience of doorstep delivery with Cabriot Eat. Our
-                                    efficient delivery service ensures that your favorite meals are delivered fresh and
-                                    on time, right to your doorstep. Whether you're craving a quick lunch at the office
-                                    or planning a cozy dinner at home, our dedicated team ensures prompt and reliable
-                                    delivery, so you can savor your meal without hassle. With real-time tracking and
-                                    friendly delivery personnel, we strive to make your dining experience seamless and
-                                    enjoyable, wherever you are</p>
+                                <p class="lead">Enjoy the convenience of doorstep delivery with Cabriot Eat. Our efficient
+                                    delivery service ensures that your favorite meals are delivered fresh and on time,
+                                    right to your doorstep. Whether you're craving a quick lunch at the office or planning a
+                                    cozy dinner at home, our dedicated team ensures prompt and reliable delivery, so you can
+                                    savor your meal without hassle. With real-time tracking and friendly delivery personnel,
+                                    we strive to make your dining experience seamless and enjoyable, wherever you are.</p>
                                 <!-- Additional paragraph content -->
                             </div>
                             <div class="col-lg-6">
-                                <img src="./assets/img/dilivery.jpg" class="d-block w-100" alt="Authentic Cuisines">
+                                <img src="./assets/img/dilivery.jpg" class="d-block w-100 rounded-circle"
+                                    alt="Delivery Services">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+    
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -194,9 +234,8 @@ l
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
     </header>
-
+    
 
     <section id="services" class="services bulk-orders-service mb-lg-0 text-lg-start">
         <div class="background ">
