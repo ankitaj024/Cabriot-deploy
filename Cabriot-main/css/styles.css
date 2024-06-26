@@ -67,6 +67,8 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+
+
 *,
 *::before,
 *::after {
@@ -11090,6 +11092,8 @@ html {
   content: "";
   background-image: url("../assets/img/cabriot_eat.png");
 }
+
+
 
 .device-stay[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
   content: "";
