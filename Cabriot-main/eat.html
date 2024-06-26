@@ -42,6 +42,7 @@
                 width: 12px;
                 height: 12px;
                 border-radius: 50%;
+                
                 cursor: pointer; /* Ensure pointer cursor for clickable items */
                 z-index: 10; /* Ensure indicators are above other content */
             }
@@ -59,6 +60,8 @@
                 z-index: 10; /* Ensure controls are above other content */
             }
             
+            
+
             @media (max-width: 768px) {
                 .carousel-item {
                     min-height: auto; /* Revert to auto height for smaller screens */
@@ -122,11 +125,11 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!-- Masthead header-->
-                <header class="masthead home-background">
+                <header class="masthead home-background ">
                     <div class="container px-5">
-                        <div class="row gx-5 align-items-center">
+                        <div class="row gx-5 align-items-center  ">
                             <div class="col-lg-6 container">
-                                <div class="mb-5 mb-lg-0 text-lg-start eat-home">
+                                <div class="mb-5 mb-lg-0 text-lg-start eat-home bor ">
                                     <img class="mb-3" src="./assets/img/Eat.svg" alt="" />
                                     <h1 class="mb-3">India's First<br /> Fully Customizable<br /> Mess App</h1>
                                     <p class="lead fw-normal text-muted mb-4">
@@ -232,11 +235,11 @@
                 </header>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev bor" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next bor" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
