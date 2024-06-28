@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 :root {
   --bs-blue: #2937f0;
   --bs-indigo: #6610f2;
@@ -47,7 +47,7 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 500;
+  --bs-body-font-weight: 600;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
@@ -81,10 +81,13 @@
   }
 }
 
+html{
+  font-family: 'Poppins', sans-serif;
+}
 body {
   margin: 0;
   min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
-  font-family: 'Poppins', sans-serif;
+ 
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   color: var(--bs-body-color);
@@ -109,7 +112,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Popins', sans-serif;
 }
 
 h1 {
@@ -497,7 +500,7 @@ progress {
 
 .lead {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .display-1 {
@@ -1131,6 +1134,7 @@ progress {
   .col-md-7 {
     flex: 0 0 auto;
     width: 58.33333333%;
+    
   }
   .col-md-8 {
     flex: 0 0 auto;
@@ -2154,7 +2158,7 @@ textarea.form-control-lg {
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
@@ -2884,7 +2888,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: center;
   border: none;
-  background: #212021;
+  background: #212021 !important;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -3190,7 +3194,7 @@ textarea.form-control-lg {
 }
 
 .btn-link {
-  --bs-btn-font-weight: 500;
+  --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-link-color);
   --bs-btn-bg: transparent;
   --bs-btn-border-color: transparent;
@@ -3521,7 +3525,7 @@ textarea.form-control-lg {
   width: 100%;
   padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
   clear: both;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--bs-dropdown-link-color);
   text-align: inherit;
   text-decoration: none;
@@ -5656,7 +5660,7 @@ textarea.form-control-lg {
   padding: var(--bs-tooltip-arrow-height);
   margin: var(--bs-tooltip-margin);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
   text-align: left;
   text-align: start;
@@ -5765,7 +5769,7 @@ textarea.form-control-lg {
   display: block;
   max-width: var(--bs-popover-max-width);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
   text-align: left;
   text-align: start;
@@ -7768,6 +7772,7 @@ textarea.form-control-lg {
 
 .mb-3 {
   margin-bottom: 1rem !important;
+  font-weight: 600 !important;
 }
 
 .mb-4 {
@@ -11853,11 +11858,12 @@ footer {
   background-size: 350px;
   background-repeat: repeat;
   background-position: 0 0;
+  border: 1px solid black;
 }
 
 @media (max-width:600px) {
   footer{
-    text-align: left;
+    border: 0.5px solid black;
     padding-left: 20px;
   }
 }
@@ -12688,190 +12694,3 @@ color: #FFFFFF;
 }
 
 
-
-.masthead {
-  height: 778px; /* Fixed height */
-  display: flex;
-  align-items: center;
-}
-
-
-
-@media (max-width: 768px) {
-  .carousel-item {
-      min-height: auto; /* Revert to auto height for smaller screens */
-  }
-  .masthead-device-mockup {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-  }
-  .carousel-item img {
-      width: 300px;
-      height: 290px;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-      padding: 40px; /* Increase padding for easier clicking on mobile */
-      width: 50px; /* Ensure controls are wide enough */
-  }
-
-  .masthead .container {
-      margin-bottom: 100px; /* Add bottom margin to avoid overlap */
-  }
-
-  .masthead {
-      padding: 0 40px; /* Add padding to avoid overlap */
-  }
-  .masthead {
-      padding-top: 30px;
-      height: 1350px; /* Fixed height */
-      display: flex;
-      align-items: center;
-  }
-  .logo{
-      padding-top: 100px;
-      padding-right: 100px;
-  }
-  .logo-1{
-     padding-left: 0%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-  }
-  .logo-2{
-      padding-top: 170px;
-      padding-right: 100px;
-  }
-  .img2{
-      padding-bottom: 50px;
-      padding-right: 100px;
-  }
-  .logo-3{
-      padding-top: 140px;
-      padding-right: 100px;
-  }
-  .pad-logo{
-      padding-top: 20px;
-      padding-right: 100px;
-  }
-  .text{
-      margin-bottom: 0;
-  }
-
-}
-
-@media (max-width: 400px) {
-  .carousel-item {
-      min-height: auto; /* Revert to auto height for smaller screens */
-  }
-  .masthead-device-mockup {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    
-  }
-  .carousel-item img {
-      width: 200px;
-      height: 171px;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-      padding: 40px; /* Increase padding for easier clicking on mobile */
-      width: 50px; /* Ensure controls are wide enough */
-  }
-
-  .masthead .container {
-      margin-bottom: 100px; /* Add bottom margin to avoid overlap */
-  }
-
-  .masthead {
-      padding: 0 40px; /* Add padding to avoid overlap */
-  }
-  .masthead {
-      padding-top: 30px;
-      height: 1350px; /* Fixed height */
-      display: flex;
-      align-items: center;
-  }
-  
- 
- 
-  .img2{
-      padding-bottom: 50px;
-      padding-right: 100px;
-  }
-  .logo-3 {
-      padding-top: 115px;
-      padding-right: 100px;
-      
-  }
-  
-  .text{
-      margin-bottom: 0;
-  }
-
-}
-
-.office-lunch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightgrey;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 50px;
-  
-}
-
-.office-lunch .content {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.heading {
-  font-size: 70px;
-  margin: 20px 0;
-}
-
-.office-lunch .content p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 20px;
-}
-
-.office-lunch .images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.office-lunch .images img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 300px; /* Adjust this value based on the desired image width */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .heading {
-      font-size: 50px;
-  }
-
-  .office-lunch .content p {
-      font-size: 14px;
-  }
-
-  .office-lunch .images {
-      flex-direction: column;
-  }
-
-  .office-lunch .images img {
-      max-width: 100%;
-  }
-}
