@@ -7125,6 +7125,8 @@ textarea.form-control-lg {
 
 .d-grid {
   display: grid !important;
+  
+  
 }
 
 .d-table {
@@ -11649,6 +11651,7 @@ margin-bottom: 25px;
   .btn-primary{
     width: 100%;
     height: 4rem;
+   
   }
   .download-section .container>form{
     gap: 13px;
@@ -12693,4 +12696,8 @@ color: #FFFFFF;
   }
 }
 
+#submitButton{
+ 
+  width: 100%;
+}
 
