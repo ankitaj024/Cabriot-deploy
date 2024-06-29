@@ -1,66 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const dots = document.querySelectorAll('.dots .dot');
-    const slides = document.querySelectorAll('#slider figure header');
-    const figure = document.querySelector('#slider figure');
-
-    function updateSliderPosition(index) {
-        const slideWidth = slides[0].clientWidth;
-        figure.style.left = `-${index * slideWidth}px`;
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            // Remove active class from all dots
-            dots.forEach(d => d.classList.remove('active'));
-            // Add active class to the clicked dot
-            dot.classList.add('active');
-            // Move the slider to the corresponding slide
-            updateSliderPosition(index);
-        });
-    });
-
-    function updateActiveDot(index) {
-        // Remove active class from all dots
-        dots.forEach(dot => dot.classList.remove('active'));
-        // Add active class to the corresponding dot
-        dots[index].classList.add('active');
-    }
-
+    const slider = document.getElementById('slider');
+    const dots = document.querySelectorAll('.dot');
+    const figure = slider.querySelector('figure');
     let currentIndex = 0;
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSliderPosition(currentIndex);
-        updateActiveDot(currentIndex);
-    }, 5000); // Change slide every 5 seconds
+    let startX;
+    let endX;
 
-    window.addEventListener('resize', () => {
-        updateSliderPosition(currentIndex);
-    });
-});
-
-
-  
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
-
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            currentIndex = parseInt(dot.getAttribute('data-dot-index'));
+            updateSlider();
         });
     });
 
+    slider.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener('touchmove', function(e) {
+        endX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener('touchend', function() {
+        if (startX > endX + 50) {
+            nextSlide();
+        } else if (startX < endX - 50) {
+            prevSlide();
+        }
+    });
+
+    function updateSlider() {
+        figure.style.left = `-${currentIndex * 100}%`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+        if (currentIndex < dots.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider();
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = dots.length - 1;
+        }
+        updateSlider();
+    }
 });
