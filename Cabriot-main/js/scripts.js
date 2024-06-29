@@ -3,6 +3,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('#slider figure header');
     const figure = document.querySelector('#slider figure');
 
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function handleTouchStart(event) {
+        touchStartX = event.touches[0].clientX;
+    }
+
+    function handleTouchMove(event) {
+        touchEndX = event.touches[0].clientX;
+    }
+
+    function handleTouchEnd() {
+        if (touchStartX - touchEndX > 50) {
+            // Swiped left, move to the next slide
+            currentIndex = (currentIndex + 1) % slides.length;
+        } else if (touchEndX - touchStartX > 50) {
+            // Swiped right, move to the previous slide
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        }
+
+        updateSliderPosition(currentIndex);
+        updateActiveDot(currentIndex);
+    }
+
+    figure.addEventListener('touchstart', handleTouchStart, false);
+    figure.addEventListener('touchmove', handleTouchMove, false);
+    figure.addEventListener('touchend', handleTouchEnd, false);
+
     function updateSliderPosition(index) {
         const slideWidth = slides[0].clientWidth;
         figure.style.left = `-${index * slideWidth}px`;
@@ -15,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to the clicked dot
             dot.classList.add('active');
             // Move the slider to the corresponding slide
-            updateSliderPosition(index);
+            currentIndex = index;
+            updateSliderPosition(currentIndex);
         });
     });
 
@@ -38,8 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-  
 
 window.addEventListener('DOMContentLoaded', event => {
 
