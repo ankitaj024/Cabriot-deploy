@@ -236,6 +236,11 @@
     .office-lunch .content {
         text-align: center;
         margin-bottom: 20px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     }
 
     .heading {
@@ -248,6 +253,8 @@
        
         line-height: 1.5;
         margin: 0 20px;
+        width: 100%; /* Ensure paragraph takes full width */
+        max-width: 800px;
     }
     p{
         font-weight: 300 !important;
@@ -508,6 +515,7 @@
     <section class="office-lunch">
         <div class="content">
             <h1 class="heading">Office Lunch</h1>
+            <div class="eat-title-underline"></div>
             <p>
                 Join us for a delightful office lunch experience where you can
                 enjoy a variety of cuisines and connect with your colleagues in
