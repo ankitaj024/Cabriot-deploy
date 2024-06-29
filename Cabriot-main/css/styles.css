@@ -12699,5 +12699,7 @@ color: #FFFFFF;
 
 #submitButton{
   background-color: green;
-  
+  width: auto;
+  color: black;
+  font-weight: 500;
 }
