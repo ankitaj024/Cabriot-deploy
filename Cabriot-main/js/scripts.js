@@ -1,58 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('slider');
-    const dots = document.querySelectorAll('.dot');
-    const figure = slider.querySelector('figure');
-    let currentIndex = 0;
-    let startX;
-    let endX;
+    const dots = document.querySelectorAll('.dots .dot');
+    const slides = document.querySelectorAll('#slider figure header');
+    const figure = document.querySelector('#slider figure');
 
-    dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-            currentIndex = parseInt(dot.getAttribute('data-dot-index'));
-            updateSlider();
+    function updateSliderPosition(index) {
+        const slideWidth = slides[0].clientWidth;
+        figure.style.left = `-${index * slideWidth}px`;
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // Remove active class from all dots
+            dots.forEach(d => d.classList.remove('active'));
+            // Add active class to the clicked dot
+            dot.classList.add('active');
+            // Move the slider to the corresponding slide
+            updateSliderPosition(index);
         });
     });
 
-    slider.addEventListener('touchstart', function(e) {
-        startX = e.touches[0].clientX;
-    });
-
-    slider.addEventListener('touchmove', function(e) {
-        endX = e.touches[0].clientX;
-    });
-
-    slider.addEventListener('touchend', function() {
-        if (startX > endX + 50) {
-            nextSlide();
-        } else if (startX < endX - 50) {
-            prevSlide();
-        }
-    });
-
-    function updateSlider() {
-        figure.style.left = `-${currentIndex * 100}%`;
+    function updateActiveDot(index) {
+        // Remove active class from all dots
         dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentIndex].classList.add('active');
+        // Add active class to the corresponding dot
+        dots[index].classList.add('active');
     }
 
-    function nextSlide() {
-        if (currentIndex < dots.length - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateSlider();
-    }
+    let currentIndex = 0;
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSliderPosition(currentIndex);
+        updateActiveDot(currentIndex);
+    }, 5000); // Change slide every 5 seconds
 
-    function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = dots.length - 1;
-        }
-        updateSlider();
-    }
+    window.addEventListener('resize', () => {
+        updateSliderPosition(currentIndex);
+    });
 });
+
 
   
 
