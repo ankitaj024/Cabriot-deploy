@@ -11086,6 +11086,21 @@ html {
   background-image: url("../assets/img/cabriot_home.png");
 }
 
+.device-delivery[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
+  content: "";
+  background-image: url("../assets/img/Designer-removebg-preview\ \(1\).png");
+}
+.device-hygin[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
+  content: "";
+  background-image: url("../assets/img/Designer2-removebg-preview\ \(1\).png");
+}
+
+.device-authe[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
+  content: "";
+  background-image: url("../assets/img/Designer3-removebg-preview.png");
+}
+
+
 .device-eat[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
   content: "";
   background-image: url("../assets/img/cabriot_eat.png");
