@@ -1,3 +1,45 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const dots = document.querySelectorAll('.dots .dot');
+    const slides = document.querySelectorAll('#slider figure header');
+    const figure = document.querySelector('#slider figure');
+
+    function updateSliderPosition(index) {
+        const slideWidth = slides[0].clientWidth;
+        figure.style.left = `-${index * slideWidth}px`;
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // Remove active class from all dots
+            dots.forEach(d => d.classList.remove('active'));
+            // Add active class to the clicked dot
+            dot.classList.add('active');
+            // Move the slider to the corresponding slide
+            updateSliderPosition(index);
+        });
+    });
+
+    function updateActiveDot(index) {
+        // Remove active class from all dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        // Add active class to the corresponding dot
+        dots[index].classList.add('active');
+    }
+
+    let currentIndex = 0;
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSliderPosition(currentIndex);
+        updateActiveDot(currentIndex);
+    }, 5000); // Change slide every 5 seconds
+
+    window.addEventListener('resize', () => {
+        updateSliderPosition(currentIndex);
+    });
+});
+
+
+  
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -21,8 +63,4 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-
 });
-
-
-
