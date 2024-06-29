@@ -500,7 +500,7 @@ progress {
 
 .lead {
   font-size: 1rem;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
 
 .display-1 {
@@ -12702,5 +12702,5 @@ color: #FFFFFF;
 }
 
 .bulk-para{
-  font-weight: 400 !important;
+  font-weight: 300 !important;
 }
