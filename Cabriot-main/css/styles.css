@@ -12707,7 +12707,7 @@ color: #FFFFFF;
   font-family: Gilroy;
   text-align: center;
   width: 100%;
-  max-width: 1500px; /* Maximum width of the content */
+  max-width: 100%; /* Maximum width of the content */
   margin-top: 0 auto;
   padding-top: 60px !important;
   padding-bottom: 60px !important;
