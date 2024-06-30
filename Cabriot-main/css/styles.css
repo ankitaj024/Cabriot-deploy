@@ -12701,3 +12701,71 @@ color: #FFFFFF;
 #submitButton{
   width: auto;
 }
+
+
+.main-container {
+  font-family: Gilroy;
+  text-align: center;
+  width: 100%;
+  max-width: 1500px; /* Maximum width of the content */
+  margin-top: 0 auto;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  padding: 0 20px; /* Add padding for better mobile display */
+  box-sizing: border-box;
+  background-size: 350px !important;
+  background: black;
+  background-image: url(../assets/img/Cabriot_pattern_black-svg.svg);
+}
+
+.text-center {
+  margin-bottom: 50px;
+  gap: 20px;
+  
+  color: white;
+}
+.para{
+  padding-top: 10px;
+  text-size-adjust: 20px;
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+  gap: 20px; /* Space between the images */
+  width: 100%;
+}
+
+.image-row img {
+  width: 100%; /* Make each image take up the entire grid cell */
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1000px) {
+  .image-row {
+      display: flex;
+      flex-wrap: wrap; /* Ensure images wrap into rows */
+      justify-content: center; /* Center align items */
+  }
+
+  .image-row img {
+      width: 90%; /* Two images per row with space between */
+      margin: 10px 0; /* Adjust margin for spacing between images */
+  }
+}
+
+@media (max-width: 767px) {
+  .image-row img {
+      width: 490px; /* Full width for single column on very small screens */
+      margin: 10px 0; /* Adjust margin for spacing */
+  }
+}
+
+@media (max-width: 574px) {
+  .image-row img {
+      width: 90%; /* Full width for single column on very small screens */
+      margin: 10px 0; /* Adjust margin for spacing */
+  }
+}
+/* Media query for very small screens */
