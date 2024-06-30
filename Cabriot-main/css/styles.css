@@ -11529,6 +11529,7 @@ html {
   background-size: 350px;
   background-repeat: repeat;
   background-position: 0 0;
+  margin-top: -25;  /* New add*/
 }
 
 .home-background{
