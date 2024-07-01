@@ -12704,7 +12704,6 @@ color: #FFFFFF;
 
 
 .main-container {
-  font-family: Gilroy;
   text-align: center;
   width: 100%;
   max-width: 100%; /* Maximum width of the content */
@@ -12721,7 +12720,6 @@ color: #FFFFFF;
 .text-center {
   margin-bottom: 50px;
   gap: 20px;
-  
   color: white;
 }
 .para{
