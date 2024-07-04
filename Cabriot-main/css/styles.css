@@ -12882,7 +12882,9 @@ color: #FFFFFF;
 .img1{
   position: absolute;
   top: -350px;
-  left: -180px; /* Adjust this value to move the image to the left */
+  
+  left: 0; /* Adjust this value to move the image to the left */
+  transform: translateX(-180px);
   width: 100%;
   height: 900px;
 }
@@ -12915,12 +12917,9 @@ color: #FFFFFF;
 .img1 {
   position: absolute;
   top: -350px;
-  left: -140px;
+  transform: translateX(-140px);
 }
 }
-
-
-
 
 
 @media (max-width : 1000px){
@@ -12936,6 +12935,3 @@ color: #FFFFFF;
     width: 350px !important;
   }
 }
-
-
-
