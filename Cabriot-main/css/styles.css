@@ -12905,13 +12905,15 @@ color: #FFFFFF;
 .logo-item2 h3 {
   margin: 17px 0;
   padding: 0 0.5rem;
+  padding-top: 15px;
   
 }
 
 .logo-item2 p {
   margin: 0;
-  padding-left: 3%;
+ padding-left: 11px;
   width: 57%;
+  font-weight: 400;
 
 }
 
