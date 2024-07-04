@@ -12878,7 +12878,7 @@ color: #FFFFFF;
   padding-bottom: 10rem;
   padding-top : 10rem;
   display: flex;
-  justify-content: space-between;
+  gap: o;
   align-items: flex-start;
   max-width: 100%;
   background-size: 350px;
@@ -12886,6 +12886,7 @@ color: #FFFFFF;
     background-position: 0 4px;
     background-color: #F8F9FA;
     padding-left: 140px;
+    padding-right: 90px;
 }
 
 .logo-item2 {
@@ -12912,7 +12913,7 @@ color: #FFFFFF;
 .logo-item2 p {
   margin: 0;
  padding-left: 11px;
-  width: 57%;
+  width: 77%;
   font-weight: 400;
 
 }
@@ -12922,6 +12923,7 @@ color: #FFFFFF;
     padding-top: 3rem;
     padding-bottom: 3rem;
     padding-left: 0;
+    padding-right: 0;
   }
   .img33{
     justify-content: flex-start;
@@ -12939,17 +12941,19 @@ color: #FFFFFF;
   .logo-item2 img {
     margin: 0;
     max-width: 100%;
-    height: 33%;
-    padding-top: 18%
+    height: 27%;
+    padding-top: 27%
     
 }
 
 .logo-item2 h3{
   font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 7px;
 }
 .logo-item2 p{
   width: 100%;
-  font-size : 0.9rem;
+  
   font-weight: 400;
   padding-bottom : 16%
   
