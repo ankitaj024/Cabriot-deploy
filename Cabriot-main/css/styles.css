@@ -12875,7 +12875,7 @@ color: #FFFFFF;
 
 .container3 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
