@@ -12883,7 +12883,7 @@ color: #FFFFFF;
   max-width: 100%;
   background-size: 350px;
     background-repeat: repeat;
-    background-position: 0 79px;
+    background-position: 0 4px;
     background-color: #F8F9FA;
 }
 
@@ -12913,6 +12913,10 @@ color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
+  .container3{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
   .img33{
     justify-content: flex-start;
     
