@@ -12820,6 +12820,7 @@ color: #FFFFFF;
 .food-Image img{
   width:440px !important;
   height:370px !important;
+  margin-left: 202px;
 }
 
 .list{
@@ -12871,3 +12872,70 @@ color: #FFFFFF;
     font-size: 2rem;
   }
 }
+
+.overlap{
+  position: relative;
+  width: 300px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+.img1{
+  position: absolute;
+  top: -350px;
+  left: -180px; /* Adjust this value to move the image to the left */
+  width: 100%;
+  height: 900px;
+}
+
+.img2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.5; Adjust opacity to make the overlap effect more visible */
+}
+
+.text-lg-start2 {
+  text-align: left !important;
+  margin-left: 312px;
+  width: 100%;
+}
+@media (max-width : 1200px){
+.text-lg-start2{
+  margin-left: 140px;
+}
+.food-Image img{
+  margin: -18px;
+  width: 100% !important;
+}
+.food-Image img {
+  margin-left: 100px;
+}
+.img1 {
+  position: absolute;
+  top: -350px;
+  left: -140px;
+}
+}
+
+
+
+
+
+@media (max-width : 1000px){
+  .text-lg-start2{
+    margin-left: 0;
+  }
+  .img1{
+    display: none;
+    
+  }
+  .food-Image img{
+    margin: 0;
+    width: 350px !important;
+  }
+}
+
+
+
