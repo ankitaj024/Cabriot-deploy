@@ -12160,18 +12160,21 @@ color: #FFFFFF;
 
 .about-image{
   object-fit: contain; 
-  width: 450px;
+  width:450px;
 }
 @media (max-width: 1200px) {
   .about-image{
     width: 88%;
+    margin-left: 1px;
+    margin-top: 30px;
   }
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .about-image{
     width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -12706,9 +12709,10 @@ color: #FFFFFF;
   width: auto;
 }
 
-.head{
+/* .head{
   color: #00C064;
   font-size: 50px;
+  margin-bottom: -10px !important;
 }
 
 .list{
@@ -12722,9 +12726,17 @@ color: #FFFFFF;
   background-color: #00C064;
   font-size: 25px;
   border-radius: 30px;
-  width: 150px;
-  
+  width: 200px;
+  margin-top: 86px;
 
+}
+
+.btn:hover{
+  background-color: #0dcaf0;
+}
+
+.about-desc{
+  margin-bottom: 2rem;
 }
 
 .btndiv{
@@ -12732,4 +12744,114 @@ color: #FFFFFF;
   padding: 10px;
 }
 
+.imgclass{
+  position: absolute; left:0px; top:110px;
+  border: 2px solid black;
+}
 
+.conclass{
+  width:100%; position:relative;
+  border: 2px solid black;
+}
+
+.pad{
+  padding-left: 70px;
+}
+.bigimg{
+  width:100%; display: flex; justify-content: flex-end;
+}
+
+/* @media (max-width: 600px) {
+  .imgclass {
+    display: none;
+  }
+} */
+
+/* @media (max-width: 1000px) {
+  .imgclass {
+    display: none;
+    justify-content: center;
+  }
+
+  .pad{
+    padding-left: 24px;
+  }
+
+  .btn{
+    margin: 24px;
+    margin-left: 0;
+  }
+  ul{
+    margin-left: -1rem;
+  }
+  .bigimg{
+    justify-content: center;
+  }
+} */ 
+
+
+
+.home{
+  padding-right: 1.5rem !important ;
+  padding-left: 1.5rem !important;
+}
+
+.bulk-heading h2{
+  font-size: 2.5rem;
+  color: #00BF63;
+  margin-bottom:-2.0rem;
+  
+}
+
+/* .bulk-heading{
+  
+  
+} */
+.bulk-para{
+  /* border:2px solid black; */
+  font-weight: 400!important;
+  font-size: 1rem;
+  width: 90%;
+
+
+ }
+.food-Image img{
+  width:440px !important;
+  height:370px !important;
+}
+
+.list{
+  margin-top:3.5rem;
+  display:flex;
+  width:70%;
+  justify-content:space-between;
+  font-weight: 400!important;
+  
+}
+
+.btndiv{
+  margin-top:1rem;
+}
+.btndiv .btn{
+ 
+  background:#00BF63;
+  color:white;
+  font-size:1.2rem;
+  font-weight:700;
+  border-radius:30px;
+  width:200px;
+  height:50px;
+}
+
+@media (max-width : 1200px){
+  .food-Image img{
+    width : 80% !important;
+  }
+}
+
+@media (max-width : 500px){
+  .food-Image img{
+    width: 100% !important;
+  }
+
+}
