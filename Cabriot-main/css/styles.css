@@ -12874,11 +12874,17 @@ color: #FFFFFF;
 }
 
 .container3 {
+  width: 100%;
+  padding-bottom: 12rem;
+  padding-top : 12rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  background-size: 350px;
+    background-repeat: repeat;
+    background-position: 0 79px;
+    background-color: #F8F9FA;
 }
 
 .logo-item2 {
