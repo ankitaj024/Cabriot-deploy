@@ -11536,22 +11536,7 @@ html {
   background-image: url("../assets/img/cabriot_pattern.svg");
 }
 
-.about-cabriot2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 700px;
-  padding-top: 6.8rem;
-  padding-bottom: 3rem;
-}
-.about-cabriot3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 550px;
-  padding-top: 6.8rem;
-  padding-bottom: 3rem;
-}
+
 
 .about-cabriot{
   display: flex;
@@ -13038,5 +13023,15 @@ color: #FFFFFF;
     width: 2.5rem !important;
     margin-top: 0.5rem !important;
   }
+  .card-body h3{
+    margin-top: 1.3rem;
+  }
   
 }
+
+@media (max-width:760px){
+.about-cabriot p{
+  width: 100% !important;
+}
+}
+
