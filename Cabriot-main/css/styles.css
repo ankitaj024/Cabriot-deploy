@@ -12855,11 +12855,15 @@ color: #FFFFFF;
     margin-left: 20px;
   }
 
+  .list ul{
+    padding-left: 1.5rem !important;
+  }
   .list{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     width: 100%;
+    padding-left: ;
   }
   .bulk-heading h2{
     margin-left: 14px;
