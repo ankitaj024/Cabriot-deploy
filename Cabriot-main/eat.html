@@ -909,44 +909,55 @@
 
 <section class="py-4 bg-white">
     <div class="container d-flex justify-content-center align-items-center">
-        <div class="row justify-content-center w-100">
-            <div class="col-lg-8 text-center">
-                <h1 class="display-4 py-6 fw-semibold">Get Started <span class="today">Today</span>!</h1>
-                <p class="lead text-muted custom-paragraph1">Your culinary journey begins with us. Fill out the form and let's create something extraordinary together!</p>
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6 mb-3 px-4">
-                            <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Full Name" required>
-                        </div>
-                        <div class="col-md-6 mb-3 px-4">
-                            <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Mobile Number" required>
-                        </div>
-                        <div class="col-md-6 mb-3 px-4">
-                            <input type="email" class="form-control Place border-success rounded-3 p-4" placeholder="Email Address" required>
-                        </div>
-                        <div class="col-md-6 mb-3 px-4">
-                            <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Location" required>
-                        </div>
-                        <div class="col-md-6 mb-3 px-4">
-                            <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Type of Service" required>
-                        </div>
-                        <div class="col-md-6 mb-3 px-4">
-                            <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Number of Guests / Tenants" required>
-                        </div>
-                        <div class="col-12 mb-3 px-4">
-                            <textarea class="form-control Place border-success rounded-3 p-4" placeholder="Message" rows="4" required></textarea>
-                        </div>
-                        <div class="btndiv d-flex justify-content-end mb-3 px-4">
-                            <button type="submit" class="btn px-4 py-2">Submit</button>
-                        </div>
-                        
-                    </div>
-                </form>
+      <div class="row justify-content-center w-100">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 py-6 fw-semibold">Get Started <span class="today">Today</span>!</h1>
+          <p class="lead text-muted custom-paragraph1">Your culinary journey begins with us. Fill out the form and let's create something extraordinary together!</p>
+          <form id="contform" >
+            <div class="row g-3">
+              <div class="col-md-6 mb-3 px-4">
+                <input type="hidden" name="access_key" value="023b4922-8343-4eb2-b160-2f22c879a896">
+                <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Full Name" required>
+              </div>
+              <div class="col-md-6 mb-3 px-4">
+                <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Mobile Number" required>
+              </div>
+              <div class="col-md-6 mb-3 px-4">
+                <input type="email" class="form-control Place border-success rounded-3 p-4" placeholder="Email Address" required>
+              </div>
+              <div class="col-md-6 mb-3 px-4">
+                <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Location" required>
+              </div>
+              <div class="col-md-6 mb-3 px-4">
+                <select class="form-select Place border-success rounded-3 p-4" aria-label="Type of Service" required>
+                  <option value="">Select Type of Service</option>
+                  <option value="catering">Catering</option>
+                  <option value="personal_chef">Personal Chef</option>
+                  <option value="cooking_class">Cooking Class</option>
+                  </select>
+              </div>
+              <div class="col-md-6 mb-3 px-4">
+                <input type="text" class="form-control Place border-success rounded-3 p-4" placeholder="Number of Guests / Tenants" required>
+              </div>
+              <div class="col-12 mb-3 px-4">
+                <textarea class="form-control Place border-success rounded-3 p-4" placeholder="Message" rows="4" required></textarea>
+              </div>
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    <br />
+                </div>
             </div>
+              <div class="btndiv d-flex justify-content-end mb-3 px-4">
+                <button type="submit" class="btn px-4 py-2" id="submitButton">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
+        <div id="form-result"></div>
+      </div>
     </div>
-</section>
-
+  </section>
     
     
     <!-- Footer-->
@@ -1019,11 +1030,14 @@
     </div>
 </div>
 <script>
+    
     const form = document.getElementById('formSubmit');
     const result = document.getElementById('result');
-    const accessResult = document.getElementById('access-result');
+    const formresult = document.getElementById('form-result');
     const modalBody = document.getElementById('modal-body');
-    const earlyAccess = document.getElementById('early-access');
+    const contform = document.getElementById('contform');
+    
+
 
     form.addEventListener('submit', function(e) {
         const formData = new FormData(form);
@@ -1080,19 +1094,21 @@
             });
     });
 
-
-    earlyAccess.addEventListener('submit', function(e) {
+    contform.addEventListener('submit', function(e) {
         const formData = new FormData(form);
         e.preventDefault();
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
-        accessResult.innerHTML = "Please wait...";
-        accessResult.style.textAlign = "center";
-        accessResult.style.marginTop = "15px";
-        accessResult.style.textAlign = "center";
-        accessResult.style.display = "block";
-        accessResult.style.color = "#fff"
+    
+        // Display loading message while submitting
+        formresult.innerHTML = "Please wait...";
+        formresult.style.textAlign = "center";
+        form.style.marginTop = "15px";
+        form.style.textAlign = "center";
+        form.style.marginBottom = "37px"
+        form.style.display = "block";
+        form.style.color = "#00C064";
     
         fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
@@ -1105,7 +1121,7 @@
             .then(async (response) => {
                 let jsonResponse = await response.json();
                 if (response.status == 200) {  
-                    accessResult.innerHTML = "Email Submitted Successfully 🎉";
+                    formresult.innerHTML = "Form Submitted Successfully 🎉";
                     // modalBody.style.display = "none";
                     // result.innerHTML = `
                     //     <img src="./assets/img/success-svgrepo-com.svg"/>
@@ -1115,22 +1131,26 @@
                 } else {
                     console.log(response);
                     modalBody.style.display = "none";
-                    accessResult.innerHTML = "Error sending message!";
+                    form.innerHTML = "Error sending message!";
                 }
             })
             .catch(error => {
                 console.log(error);
                 modalBody.style.display = "none";
-                accessResult.innerHTML = "Something went wrong!";
+                form.innerHTML = "Something went wrong!";
             })
             .then(function() {
+                // Reset form and hide result after 3 seconds
                 form.reset();
                 setTimeout(() => {
-                    accessResult.style.display = "none";
+                    form.style.display = "none";
                     // modalBody.style.display = "block";
                 }, 3000);
             });
     });
+
+    
+    
 </script>
 
     

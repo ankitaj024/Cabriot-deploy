@@ -12840,6 +12840,10 @@ color: #FFFFFF;
   width:200px;
   height:50px;
 }
+.btndiv .btn:active{
+  background: #00BF63;
+  color: white;
+}
 
 @media (max-width : 1200px){
   .food-Image img{
@@ -13056,3 +13060,4 @@ color: #FFFFFF;
 .today{
   color:#00BF63 !important;
 }
+
