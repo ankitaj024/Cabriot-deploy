@@ -13040,17 +13040,17 @@ color: #FFFFFF;
 }
 
 
-.custom-paragraph {
+.custom-paragraph1 {
   max-width: 450px;
   margin: 0 auto;
   padding-bottom: 6rem;
   padding-top: 1.5rem;
 }
 
-.form-control {
+.form-control1 {
   border-color: grey!important;
 }
-.form-control::placeholder {
+.form-control1::placeholder {
         color: black !important;
         }
 .today{
