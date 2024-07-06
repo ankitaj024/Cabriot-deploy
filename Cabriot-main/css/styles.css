@@ -13047,10 +13047,10 @@ color: #FFFFFF;
   padding-top: 1.5rem;
 }
 
-.form-control{
+.Place{
   border-color: grey!important;
 }
-.form-control::placeholder {
+.Place::placeholder {
         color: black !important;
         }
 .today{
