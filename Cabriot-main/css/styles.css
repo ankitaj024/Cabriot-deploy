@@ -11551,7 +11551,7 @@ html {
 font-style: normal;
 font-weight: 400;
 font-size: calc(23px + 0.9vw);
-display: flex;
+/* display: flex; */
 align-items: center;
 color: #F8F9FA;
 margin-bottom: 18px;
@@ -13060,4 +13060,6 @@ color: #FFFFFF;
 .today{
   color:#00BF63 !important;
 }
+
+
 
