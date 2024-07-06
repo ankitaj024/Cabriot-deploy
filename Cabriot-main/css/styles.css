@@ -13040,3 +13040,19 @@ color: #FFFFFF;
 }
 
 
+.custom-paragraph {
+  max-width: 450px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+  padding-top: 1.5rem;
+}
+
+.form-control {
+  border-color: grey!important;
+}
+.form-control::placeholder {
+        color: black !important;
+        }
+.today{
+  color:#00BF63 !important;
+}
