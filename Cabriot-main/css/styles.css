@@ -639,7 +639,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-  /*--bs-gutter-x: 1.5rem;*/
+  --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
@@ -12926,13 +12926,13 @@ color: #FFFFFF;
  }
 }
 
- .Certi{
+ /* .Certi{
   background-size: 350px;
     background-repeat: repeat;
     background-position: 0 4px;
     background-color: #F8F9FA;
     background-image: url("../assets/img/cabriot_pattern.svg");
- }
+ } */
 
  .certihead{
   font-size: 3rem ;
@@ -12952,7 +12952,7 @@ color: #FFFFFF;
 
  @media(max-width: 700px){
   .certi-img img {
-    height: 5rem;
+    height: auto;
     width: 18%;
 }
 .certihead{
