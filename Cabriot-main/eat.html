@@ -193,7 +193,7 @@
         </div>
     </nav>
     <!-- Header-->
-    <div id="slider" class="back">
+    <div id="slider" class="back ">
         <figure>
             <!-- Mashead header-->
             <header class="masthead home-background ">
@@ -774,7 +774,7 @@
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="msg2" type="text" name="Message"
+                            <textarea class="form-control" id="message" type="text" name="Message"
                                 placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
@@ -978,7 +978,7 @@
             const full_name = document.getElementById('name').value;
             const mobile_no = document.getElementById('phone').value;
             const email = document.getElementById('mail').value;
-            const message = document.getElementById('msg2').value;
+            const message = document.getElementById('message').value;
 
             const body = `
           <b>FullName : </b>${full_name}
