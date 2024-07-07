@@ -12836,13 +12836,11 @@ color: #FFFFFF;
 }
 
 .list{
-  margin-top:3.5rem;
+  margin-top:2.5rem;
   display:flex;
   width:70%;
   justify-content:space-between;
   font-weight: 400!important;
- 
-  
 }
 
 .btndiv{
