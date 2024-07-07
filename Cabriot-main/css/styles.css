@@ -11097,7 +11097,7 @@ html {
 
 .device-authe[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
   content: "";
-  background-image: url("../assets/img/Designer3-removebg-preview.png");
+  background-image: url("../assets/img/12.png");
 }
 
 
@@ -13060,6 +13060,7 @@ color: #FFFFFF;
 .today{
   color:#00BF63 !important;
 }
+
 
 
 
