@@ -2842,6 +2842,15 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
+
+.nav-link {
+  color: #333; /* Default color for inactive links */
+}
+
+.nav-link.active {
+  color: #808080; /* Grey color for the active link icon */
+}
+
 .btn-check + .btn:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
@@ -11038,7 +11047,7 @@ html {
   color: #6c757d;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #2937f0;
+  color: var(--bs-nav-link-hover-color);
 }
 
 .device-wrapper {
@@ -12786,8 +12795,8 @@ color: #FFFFFF;
 
 @media (min-width:786px){
 .home{
-  padding-right: 3rem !important ;
-  padding-left: 3rem !important;
+  /* padding-right: 3rem !important ; */
+  padding-left: 2rem !important;
 }
 }
 
@@ -12846,8 +12855,9 @@ color: #FFFFFF;
   font-size:1.2rem;
   font-weight:700;
   border-radius:30px;
-  width:200px;
-  height:50px;
+  width:11rem;
+  height: 2.8rem;
+  
 }
 .btndiv .btn:active{
   background: #00BF63;
@@ -13033,18 +13043,6 @@ color: #FFFFFF;
   }
 }
 
-@media(max-width: 550px){
-  
-  .card-body img{
-    height: 2.5rem !important;
-    width: 2.5rem !important;
-    margin-top: 0.5rem !important;
-  }
-  .card-body h3{
-    margin-top: 1.3rem;
-  }
-  
-}
 
 @media (max-width:760px){
 .about-cabriot p{
@@ -13071,5 +13069,7 @@ color: #FFFFFF;
 }
 
 
-
+.list ul li::marker {
+  color: #00BF63; /* Color for special bullet points */
+}
 

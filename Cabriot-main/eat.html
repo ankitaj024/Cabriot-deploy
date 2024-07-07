@@ -89,7 +89,7 @@
         .dots li {
             width: 10px;
             height: 10px;
-            background-color: #bba3a3;
+            background-color: lightgray;
             margin: 0 5px;
             border-radius: 50%;
             cursor: pointer;
@@ -97,7 +97,7 @@
         }
 
         .dots li.active {
-            background-color: #2f2626;
+            background-color: #00BF63;
         }
 
         /* Responsive styles */
@@ -158,9 +158,9 @@
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
+        <div class="container" >
             <a href="/">
-                <img class="navbar-brand" src="./assets/img/Eat.svg" alt="" />
+                <img class="navbar-brand " src="./assets/img/Eat.svg" alt=""  />
             </a>
             <button class="navbar-toggler menu" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -176,17 +176,17 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item"><a class="nav-link me-lg-3" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link me-lg-3" href="eat">Eat</a></li>
+                    <li class="nav-item"><a class="nav-link me-lg-3 active" href="eat">Eat</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="stay">Stay</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="go">Go</a></li>
                     <li class="nav-item"><a class="nav-link me-lg-3" href="xpress">Xpress</a></li>
 
                 </ul>
-                <button class="nav-btn navprimary-btn rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
+                <button  class="nav-btn navprimary-btn rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
                     data-bs-target="#feedbackModal">
                     <span class="d-flex align-items-center">
                         <i class="bi-chat-text-fill me-2"></i>
-                        <span class="small">Contact</span>
+                        <span  class="small">Contact</span>
                     </span>
                 </button>
             </div>
@@ -338,16 +338,16 @@
                     <img src="./assets/img/bulk-corporate-order.png" class="about-image" alt="Image" />
                 </div>
                 <div class="col-lg-6 ">
-                        <div class="mb-3 mt-0">
+                        <div class="mb-2 mt-0">
                             <h2 class="mb-5 fs-1 display-5 fw-semibold" style="color:#00BF63;">Bulk
                                 Corporate Order</h2>
-                        <p class="about-desc" style="color: black; width:80%">
+                        <p class="about-desc mb-0" style="color: black; width:80%">
                             Tailored to meet corporate dinning needs, Cabriot Eat presents a three-time-a-day mess
                             service with a base menu. Our chefs customize menu based on special requirements, ensuring a
                             personalized dinning experience for corporate clients.
                         </p>
-                        <div class="list ">
-                            <ul>
+                        <div class="list">
+                            <ul class="mb-3">
                                 <li>Corporates</li>
                                 <li>Educational Institutes</li>
                                 <li>Colleges</li>
@@ -359,7 +359,7 @@
                             </ul>
                         </div>
                         <div class="btndiv">
-                            <button class="btn">Inquire</button>
+                            <a href="#contactFormSection" class="btn">Inquire</a>
                         </div>
                     </div>
                 </div>
@@ -368,17 +368,17 @@
     </section>
 
 
-    <section class="masthead home-background" style="background-position: 0 0 ;">
-        <div class="container py-4 px-sm-5">
-            <div class="d-flex flex-column flex-lg-row d-lg-flex gx-5 text-left">
+    <section class="masthead home-background pt-5 pb-5" style="background-position: 0 0;background-color:#F8F9FA;">
+        <div class="container py-0 gx-5">
+            <div class="d-flex flex-column flex-lg-row gx-5 text-left">
                 <div class="mb-4">
-                    <div class=" h-100 border-0">
-                        <div class="card-body d-flex flex-row d-lg-flex flex-lg-column p-0">
-                            <img src="./assets/img/1.png" alt="Logo 1" class="img-fluid mb-3 me-2"
-                                style="height: 5rem; width: 5rem ;">
-                            <div class="pl-5 ">
-                                <h3 class="mb-3 mt-3 fs-2">Office Lunch </h3>
-                                <p style="width: 70%; font-weight:400;">Explore diverse living spaces,including hostels,
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/1.png" alt="Logo 1" class="img-fluid mb-3 me-sm-0"
+                                style="height: 5rem; width: 5rem;">
+                            <div>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-3 fs-3">Office Lunch</h3>
+                                <p style=" font-weight: 400;">Explore diverse living spaces, including hostels,
                                     PGs, co-living spaces, service apartments, and independent homes.</p>
                             </div>
                         </div>
@@ -386,26 +386,26 @@
                 </div>
                 <div class="mb-4">
                     <div class="h-100 border-0">
-                        <div class="card-body   d-flex flex-row d-lg-flex flex-lg-column p-0">
-                            <img src="./assets/img/2.png" alt="Logo 2" class="img-fluid mb-3 me-2"
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/2.png" alt="Logo 2" class="img-fluid mb-3 me-sm-0"
                                 style="height: 5rem; width: 5rem;">
                             <div>
-                                <h3 class="mb-3 mt-3 fs-2">Personal Meal Plan</h3>
-                                <p style="width: 70%; font-weight:400;">Explore diverse living spaces, including
-                                    hostels, PGs, co-living spaces, service apartments, and independent homes.</p>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-3 fs-3">Personal Meal Plan</h3>
+                                <p style=" font-weight: 400;">Explore diverse living spaces, including hostels,
+                                    PGs, co-living spaces, service apartments, and independent homes.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <div class=" h-100 border-0">
-                        <div class="card-body  d-flex flex-row d-lg-flex flex-lg-column p-0">
-                            <img src="./assets/img/3.png" alt="Logo 3" class="img-fluid mb-4 me-2"
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/3.png" alt="Logo 3" class="img-fluid mb-3 me-sm-0"
                                 style="height: 5rem; width: 5rem;">
                             <div>
-                                <h3 class="mb-3 mt-2 fs-2">On the go Choices</h3>
-                                <p style="width: 70%; font-weight:400;">Explore diverse living spaces, including
-                                    hostels, PGs, co-living spaces, service apartments, and independent homes.</p>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-2 fs-3">On the go Choices</h3>
+                                <p style=" font-weight: 400;">Explore diverse living spaces, including hostels,
+                                    PGs, co-living spaces, service apartments, and independent homes.</p>
                             </div>
                         </div>
                     </div>
@@ -413,7 +413,6 @@
             </div>
         </div>
     </section>
-
 
 
     <section class="masthead about-cabriot" style="padding-top: 3rem; background-color: #ffffff;">
@@ -442,20 +441,17 @@
         </div>
     </section>
 
-    <section class="masthead home-background" style="background-position: 0 0 ;">
-        <div class="container py-4 px-sm-5">
-            <div class="d-flex flex-column flex-lg-row d-lg-flex gx-5 text-left">
+    <section class="masthead home-background pt-5 pb-5" style="background-position: 0 0; background-color:#F8F9FA;">
+        <div class="container py-0 px-3">
+            <div class="d-flex flex-column flex-lg-row gx-5 text-left">
                 <div class="mb-4">
-                    <div class=" h-100 border-0">
-                        <div class="card-body d-flex flex-row d-lg-flex flex-lg-column p-0">
-                            <img src="./assets/img/1.png" alt="Logo 1" class="img-fluid mb-3 me-2"
-                                style="height: 5rem; width: 5rem ;">
-                            <div class="pl-5 ">
-                                <h3 class="mb-3 mt-3 ">
-                                    <div>Fully Automated</div>
-                                    <div>Kitchen</div>
-                                </h3>
-                                <p style="width: 70%; font-weight:400;">Explore diverse living spaces,including hostels,
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/1.png" alt="Logo 1" class="img-fluid mb-3 me-sm-0"
+                                style="height: 5rem; width: 5rem;">
+                            <div>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-3 fs-3">Fully Automated <br> Kitchen</h3>
+                                <p style= "font-weight: 400;">Explore diverse living spaces, including hostels,
                                     PGs, co-living spaces, service apartments, and independent homes.</p>
                             </div>
                         </div>
@@ -463,26 +459,26 @@
                 </div>
                 <div class="mb-4">
                     <div class="h-100 border-0">
-                        <div class="card-body   d-flex flex-row d-lg-flex flex-lg-column p-0">
-                            <img src="./assets/img/2.png" alt="Logo 2" class="img-fluid mb-3 me-2"
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/2.png" alt="Logo 2" class="img-fluid mb-3 me-sm-0"
                                 style="height: 5rem; width: 5rem;">
                             <div>
-                                <h3 class="mb-3 mt-3">Hygiene Beyond <br> Borders</h3>
-                                <p style="width: 70%; font-weight:400;">Explore diverse living spaces, including
-                                    hostels, PGs, co-living spaces, service apartments, and independent homes.</p>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-3 fs-3">Hygiene beyond <br> borders</h3>
+                                <p style="font-weight: 400;">Explore diverse living spaces, including hostels,
+                                    PGs, co-living spaces, service apartments, and independent homes.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <div class=" h-100 border-0">
-                        <div class="card-body  d-flex flex-row d-lg-flex flex-lg-column p-0">
-                            <img src="./assets/img/3.png" alt="Logo 3" class="img-fluid mb-4 me-2"
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/3.png" alt="Logo 3" class="img-fluid mb-3 me-sm-0"
                                 style="height: 5rem; width: 5rem;">
                             <div>
-                                <h3 class="mb-3 mt-2">Top Quality <br> Ingredients</h3>
-                                <p style="width: 70%; font-weight:400;">Explore diverse living spaces, including
-                                    hostels, PGs, co-living spaces, service apartments, and independent homes.</p>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-2 fs-3">Top Quality <br> Ingredients</h3>
+                                <p style=" font-weight: 400;">Explore diverse living spaces, including hostels,
+                                    PGs, co-living spaces, service apartments, and independent homes.</p>
                             </div>
                         </div>
                     </div>
@@ -491,6 +487,7 @@
         </div>
     </section>
 
+    
 
 
 
@@ -515,7 +512,51 @@
         </div>
     </section>
 
-    <section class="masthead home-background" style="background-position: 0 0 ;">
+    <section class="masthead home-background pt-5 pb-5" style="background-position: 0 0; background-color:#F8F9FA">
+        <div class="container py-0 px-5">
+            <div class="d-flex flex-column flex-lg-row gx-5 text-left">
+                <div class="mb-4">
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/8.png" alt="Logo 1" class="img-fluid mb-3 me-sm-0"
+                                style="height: 5rem; width: 5rem;">
+                            <div>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-3 fs-3">Wide Variety</h3>
+                                <p style="font-weight: 400;">From traditional favorites to international cuisines, there's something for everyone.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/9.png" alt="Logo 2" class="img-fluid mb-3 me-sm-0"
+                                style="height: 5rem; width: 5rem;">
+                            <div>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-3 fs-3">Customizable Choices</h3>
+                                <p style="font-weight: 400;">Tailor your meals according to your preferences, with the option to choose from different cuisines and dietary options.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="h-100 border-0">
+                        <div class="card-body d-flex flex-column flex-sm-column flex-md-column flex-lg-column p-3">
+                            <img src="./assets/img/11.png" alt="Logo 3" class="img-fluid mb-3 me-sm-0"
+                                style="height: 5rem; width: 5rem;">
+                            <div>
+                                <h3 class="mb-3 mt-sm-0 mt-lg-2 fs-3">Nutritional Balance</h3>
+                                <p style=" font-weight: 400;">Every meal is crafted to provide a balanced diet, ensuring you get the right mix of nutrients and flavors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="masthead home-background" style="background-position: 0 0 ;">
         <div class="container py-4 px-sm-5">
             <div class="d-flex flex-column flex-lg-row d-lg-flex gx-5 text-left">
                 <div class="mb-4">
@@ -559,7 +600,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -628,7 +669,7 @@
 
 
 
-    <section class="py-4 bg-white">
+    <section id="contactFormSection" class="py-4 bg-white">
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row justify-content-center w-100">
                 <div class="col-lg-8 text-center">
