@@ -647,55 +647,43 @@
 
 
 
-    <section id="contactFormSection" class="py-4 bg-white">
+    <section id="contactFormSection" class="bg-white" style="padding-top: 6rem;>
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row justify-content-center w-100">
-                <div class="col-lg-8 text-center">
-                    <h1 class="display-4 py-6 fw-semibold">Get Started <span class="today">Today</span>&#33</h1>
-                    <p class="lead text-muted custom-paragraph1">Your culinary journey begins with us. Fill out the form
-                        and let's create something extraordinary together!</p>
+                <div class="col-lg-8 text-center ">
+                    <h2 class="display-4 py-6 fw-semibold">Get Started <span class="today">Today</span>&#33;</h2>
+                    <p class="lead text-muted custom-paragraph1">Your culinary journey begins with us. Fill out the form and let's create something extraordinary together!</p>
                     <form action="" id="contform">
                         <div class="row g-3">
                             <div class="col-md-6 mb-3 px-4">
-                                <!-- <input type="hidden" name="access_key" value="023b4922-8343-4eb2-b160-2f22c879a896"> -->
-                                <input type="text" name="name" id="Full_name"
-                                    class="form-control Place border-success rounded-3 p-4" placeholder="Full Name"
-                                    required>
+                                <input type="text" name="name" id="Full_name" class="form-control form2 Place rounded-3 p-4" placeholder="Full Name" required>
+                                <label for="Full_name"></label>
                             </div>
                             <div class="col-md-6 mb-3 px-4">
-                                <input type="text" name="mobile no." id="mobile_no"
-                                    class="form-control Place border-success rounded-3 p-4" placeholder="Mobile Number"
-                                    required>
+                                <input type="text" name="mobile" id="mobile_no" class="form-control Place rounded-3 p-4" placeholder="Mobile Number" required pattern="\d{10}" title="Please enter exactly 10 digits" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)">
                             </div>
                             <div class="col-md-6 mb-3 px-4">
-                                <input type="email" name="email" id="email"
-                                    class="form-control Place border-success rounded-3 p-4" placeholder="Email Address"
-                                    required>
+                                <input type="email" name="email" id="email" class="form-control Place rounded-3 p-4" placeholder="Email Address" required>
                             </div>
                             <div class="col-md-6 mb-3 px-4">
-                                <input type="text" name="location" id="location"
-                                    class="form-control Place border-success rounded-3 p-4" placeholder="Location"
-                                    required>
+                                <input type="text" name="location" id="location" class="form-control Place rounded-3 p-4" placeholder="Location" required>
                             </div>
                             <div class="col-md-6 mb-3 px-4">
-                                <select name="type_of_service" id="type_of_service"
-                                    class="form-select Place border-success rounded-3 p-4" aria-label="Type of Service"
-                                    required>
+                                <select name="type_of_service" id="type_of_service" class="form-select Place rounded-3 p-4" aria-label="Type of Service" required>
                                     <option value="">Select Type of Service</option>
-                                    <option value="catering">Catering</option>
-                                    <option value="personal_chef">Personal Chef</option>
-                                    <option value="cooking_class">Cooking Class</option>
+                                    <option value="catering"> Mess Service</option>
+                                    <option value="personal_chef">Corporate Event 
+                                    </option>
+                                    <option value="cooking_class"> Private Event </option>
+                                    <option value="cooking_class"> Special Occasion (E.g., Wedding, Party) </option>
+                                    <option value="cooking_class"> Other </option>
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3 px-4">
-                                <input type="text" name="no. of guest" id="no. of guest"
-                                    class="form-control Place border-success rounded-3 p-4"
-                                    placeholder="Number of Guests / Tenants" required>
+                                <input type="number" name="no_of_guest" id="no_of_guest" class="form-control Place rounded-3 p-4" placeholder="Number of Guests / Tenants" required>
                             </div>
                             <div class="col-12 mb-3 px-4">
-                                <textarea name="message" id="message"
-                                    class="form-control Place border-success rounded-3 p-4" placeholder="Message"
-                                    rows="4" required></textarea>
+                                <textarea name="message" id="message" class="form-control Place rounded-3 p-4" placeholder="Message" rows="4" required></textarea>
                             </div>
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
@@ -704,7 +692,7 @@
                                 </div>
                             </div>
                             <div class="btndiv d-flex justify-content-end mb-3 px-4">
-                                <button type="submit" class="btn px-4 py-2" id="submitButton">Submit</button>
+                                <button type="submit" id="submitBtn" class="btn px-4 py-2">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -713,7 +701,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Footer-->
     <footer>
@@ -949,18 +936,22 @@
                 Body: body
             }).then(
                 message => {
+                  if (message === 'OK') {
                     formresult.innerHTML = "Form Submitted Successfully ";
-                    // Reset form and hide result after 3 seconds
-                    contform.reset();
                     setTimeout(() => {
-                        formresult.style.display = "none";
+                      contform.reset(); // Reset form after displaying message
+                      formresult.style.display = "none";
                     }, 3000);
+                  } else {
+                    console.error("Unexpected response from email service:", message);
+                    formresult.innerHTML = "Error sending message!";
+                  }
                 },
                 error => {
-                    console.log(error);
-                    formresult.innerHTML = "Error sending message!";
+                  console.error("Error sending email:", error);
+                  formresult.innerHTML = "Error sending message!";
                 }
-            );
+              );
         });
 
         formSubmit.addEventListener('submit', function (e) {
