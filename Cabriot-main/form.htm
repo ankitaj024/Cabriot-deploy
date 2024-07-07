@@ -1,0 +1,41 @@
+<form onsubmit= "emailSend(); reset(); return false;" >
+    <div class="row g-3">
+      <div class="col-md-6 mb-3 px-4">
+        <!--<input type="hidden" name="access_key" value="023b4922-8343-4eb2-b160-2f22c879a896"> -->
+        <input type="text" name="Name:" class="form-control Place border-success rounded-3 p-4" placeholder="Full Name" required>
+      </div>
+      <div class="col-md-6 mb-3 px-4">
+        <input type="text" name="Mobile No:" class="form-control Place border-success rounded-3 p-4" placeholder="Mobile Number" required>
+      </div>
+      <div class="col-md-6 mb-3 px-4">
+        <input type="email" name="Email:" class="form-control Place border-success rounded-3 p-4" placeholder="Email Address" required>
+      </div>
+      <div class="col-md-6 mb-3 px-4">
+        <input type="text" name="Location" class="form-control Place border-success rounded-3 p-4" placeholder="Location" required>
+      </div>
+      <div class="col-md-6 mb-3 px-4">
+        <select name="Type of Service" class="form-select Place border-success rounded-3 p-4" aria-label="Type of Service" required>
+          <option value="">Select Type of Service</option>
+          <option value="catering">Catering</option>
+          <option value="personal_chef">Personal Chef</option>
+          <option value="cooking_class">Cooking Class</option>
+          </select>
+      </div>
+      <div class="col-md-6 mb-3 px-4">
+        <input type="text" name="No. of Guest" class="form-control Place border-success rounded-3 p-4" placeholder="Number of Guests / Tenants" required>
+      </div>
+      <div class="col-12 mb-3 px-4">
+        <textarea class="form-control Place border-success rounded-3 p-4" placeholder="Message" rows="4" required></textarea>
+      </div>
+      <div class="d-none" id="submitSuccessMessage">
+        <div class="text-center mb-3">
+            <div class="fw-bolder">Form submission successful!</div>
+            <br />
+        </div>
+    </div>
+      <div class="btndiv d-flex justify-content-end mb-3 px-4">
+        <button type="submit" class="btn px-4 py-2" id="submitButton">Submit</button>
+      </div>
+    </div>
+  </form>
+
