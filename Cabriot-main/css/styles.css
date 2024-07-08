@@ -13100,3 +13100,111 @@ color: #FFFFFF;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #00BF63;
 }
+
+.back {
+  background-size: 350px;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+#slider figure {
+  position: relative;
+  width: 400%;
+  /* 100% for each of the 3 slides */
+  margin: 0;
+  left: 0;
+  display: flex;
+  transition: left 0.5s ease;
+
+}
+
+#slider figure header {
+  width: 25%;
+  /* 100% / 3 slides */
+  flex: 0 0 auto;
+  background-color: #F8F9FA;
+
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.dots li {
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dots li.active {
+  background-color: #00BF63;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  #slider figure {
+      width: 400%;
+      /* 100% for each of the 3 slides */
+  }
+
+  #slider figure header {
+      width: 25%;
+      /* 100% / 3 slides */
+  }
+}
+
+@media (max-width: 768px) {
+  #slider figure {
+      width: 400%;
+      /* 100% for each of the 3 slides */
+  }
+
+  #slider figure header {
+      width: 25%;
+      /* 100% / 3 slides */
+  }
+
+  .dots li {
+      width: 6px;
+      height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  #slider figure {
+      width: 300%;
+      /* 100% for each of the 3 slides */
+
+  }
+
+  #slider figure header {
+      width: 33.33%;
+      /* 100% / 3 slides */
+  }
+
+
+
+  .dots li {
+      width: 6px;
+      height: 6px;
+
+  }
+
+
+}

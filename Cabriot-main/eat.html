@@ -44,115 +44,6 @@
     <!-- SEO -->
 
     <!--  CSS for caraousel only-->
-    <style>
-        .back {
-            background-size: 350px;
-        }
-
-        #slider {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        #slider figure {
-            position: relative;
-            width: 400%;
-            /* 100% for each of the 3 slides */
-            margin: 0;
-            left: 0;
-            display: flex;
-            transition: left 0.5s ease;
-
-        }
-
-        #slider figure header {
-            width: 25%;
-            /* 100% / 3 slides */
-            flex: 0 0 auto;
-            background-color: #F8F9FA;
-
-        }
-
-        .dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-        }
-
-        .dots li {
-            width: 10px;
-            height: 10px;
-            background-color: lightgray;
-            margin: 0 5px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .dots li.active {
-            background-color: #00BF63;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 1024px) {
-            #slider figure {
-                width: 400%;
-                /* 100% for each of the 3 slides */
-            }
-
-            #slider figure header {
-                width: 25%;
-                /* 100% / 3 slides */
-            }
-        }
-
-        @media (max-width: 768px) {
-            #slider figure {
-                width: 400%;
-                /* 100% for each of the 3 slides */
-            }
-
-            #slider figure header {
-                width: 25%;
-                /* 100% / 3 slides */
-            }
-
-            .dots li {
-                width: 6px;
-                height: 6px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #slider figure {
-                width: 300%;
-                /* 100% for each of the 3 slides */
-
-            }
-
-            #slider figure header {
-                width: 33.33%;
-                /* 100% / 3 slides */
-            }
-
-
-
-            .dots li {
-                width: 6px;
-                height: 6px;
-
-            }
-
-
-        }
-    </style>
 </head>
 
 <body style="overflow-y: scroll;" id="page-top">
@@ -550,8 +441,8 @@
 
     <!-- End-->
 
-    <section class="masthead home-background" style=" background-color: #F8F9FA; background-position: 0 0;">
-        <div class="container px-5 py-3">
+    <section class="masthead home-background" style=" background-color: #F8F9FA; background-position: 0 0; padding-top:5rem">
+        <div class="container px-5" >
             <div class="row gx-5 align-items-center ">
                 <div class="text-content col-lg-6 order-1 order-lg-1">
                     <div class="mb-5 mb-lg-0 text-lg-start">
