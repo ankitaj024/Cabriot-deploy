@@ -587,9 +587,10 @@
                     <h2 class="display-4 py-6 fw-semibold">Get Started <span class="today">Today</span>&#33;</h2>
                     <p class="lead text-muted custom-paragraph1">Your culinary journey begins with us. Fill out the form
                         and let's create something extraordinary together!</p>
-                    <form action="" method="POST" id="contform">
+                    <form id="contform">
                         <div class="row g-3">
                             <div class="col-md-6 mb-1 px-4 form-floating">
+                                <input type="hidden" name="access_key" value="023b4922-8343-4eb2-b160-2f22c879a896">
                                 <input type="text" name="name" id="Full_name"
                                     class="form-control form2 Place rounded-3 " placeholder="" required>
                                 <label style="padding-left: 2.5rem; font-size:1rem" for="Full_name">Name</label>
@@ -679,9 +680,9 @@
                         aria-label="Close"></button>
                 </div>
                 <div id="modal-body" class="modal-body border-0 p-4">
-                    <form action="" method="POST" id="formSubmit">
+                    <form id="formSubmit">
                         <!-- Name input-->
-                        <!-- <input type="hidden" name="access_key" value="023b4922-8343-4eb2-b160-2f22c879a896"> -->
+                        <input type="hidden" name="access_key" value="023b4922-8343-4eb2-b160-2f22c879a896">
                         <div class="form-floating mb-3">
                             <input class="form-control" id="name" name="Name" type="text"
                                 placeholder="Enter your name..." required />
@@ -690,7 +691,7 @@
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="mail" type="email" name="Email"
+                            <input class="form-control" id="email" type="email" name="Email"
                                 placeholder="name@example.com" required />
                             <label for="email">Email address</label>
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
@@ -698,17 +699,15 @@
                         </div>
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" name="Contact"
-                                placeholder="(123) 456-7890" required pattern="\d{10}"
-                                title="Please enter exactly 10 digits"
-                                oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)" />
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                data-sb-validations="required" />
                             <label for="phone">Phone number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
                             </div>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="contmessage" type="text" name="Message"
+                            <textarea class="form-control" id="message" type="text" name="Message"
                                 placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
@@ -728,91 +727,94 @@
                                 type="submit">Submit</button></div>
                     </form>
                 </div>
-                <div id="nav-result"></div>
+                <div id="result"></div>
             </div>
         </div>
     </div>
     <script>
 
-        //  form = document.getElementById('formSubmit');
-        //  result = document.getElementById('result');
-        //  formresult = document.getElementById('form-result');
-        //  modalBody = document.getElementById('modal-body');
-        //  contform = document.getElementById('contform');
+          form = document.getElementById('formSubmit');
+          result = document.getElementById('result');
+          formresult = document.getElementById('form-result');
+          modalBody = document.getElementById('modal-body');
+          contform = document.getElementById('contform');
+          contmodalBody = document.getElementById('contactFormSection');
 
 
 
-        // form.addEventListener('submit', function(e) {
-        //      formData = new FormData(form);
-        //     e.preventDefault();
 
-        //      object = Object.fromEntries(formData);
-        //      json = JSON.stringify(object);
+         form.addEventListener('submit', function(e) {
+             formData = new FormData(form);
+             e.preventDefault();
 
-        //     // Display loading message while submitting
-        //     result.innerHTML = "Please wait...";
-        //     result.style.textAlign = "center";
-        //     result.style.marginTop = "15px";
-        //     result.style.textAlign = "center";
-        //     result.style.marginBottom = "37px"
-        //     result.style.display = "block";
-        //     result.style.color = "#00C064";
+              object = Object.fromEntries(formData);
+              json = JSON.stringify(object);
 
-        //     fetch('https://api.web3forms.com/submit', {
-        //             method: 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/json',
-        //                 'Accept': 'application/json'
-        //             },
-        //             body: json
-        //         })
-        //         .then(async (response) => {
-        //             let jsonResponse = await response.json();
-        //             if (response.status == 200) {  
-        //                 result.innerHTML = "Form Submitted Successfully 🎉";
-        //                 // modalBody.style.display = "none";
-        //                 // result.innerHTML = `
-        //                 //     <img src="./assets/img/success-svgrepo-com.svg"/>
-        //                 //     <p style="color: #00cc66;">Form Submitted Successfully</p>
-        //                 //     <p>Thank you! The form has been submitted successfully. We will reply to you soon!</p>
-        //                 // `;
-        //             } else {
-        //                 console.log(response);
-        //                 modalBody.style.display = "none";
-        //                 result.innerHTML = "Error sending message!";
-        //             }
-        //         })
-        //         .catch(error => {
-        //             console.log(error);
-        //             modalBody.style.display = "none";
-        //             result.innerHTML = "Something went wrong!";
-        //         })
-        //         .then(function() {
-        //             // Reset form and hide result after 3 seconds
-        //             form.reset();
-        //             setTimeout(() => {
-        //                 result.style.display = "none";
-        //                 // modalBody.style.display = "block";
-        //             }, 3000);
-        //         });
-        // });
+             // Display loading message while submitting
+             result.innerHTML = "Please wait...";
+             result.style.textAlign = "center";
+            result.style.marginTop = "15px";
+             result.style.textAlign = "center";
+             result.style.marginBottom = "37px"
+             result.style.display = "block";
+             result.style.color = "#00C064";
 
-        /*contform.addEventListener('submit', function(e) {
-            // formData = new FormData(form);
+             fetch('https://api.web3forms.com/submit', {
+                     method: 'POST',
+                     headers: {
+                         'Content-Type': 'application/json',
+                         'Accept': 'application/json'
+                     },
+                     body: json
+                 })
+                 .then(async (response) => {
+                     let jsonResponse = await response.json();
+                     if (response.status == 200) {  
+                         result.innerHTML = "Form Submitted Successfully 🎉";
+                         // modalBody.style.display = "none";
+                         // result.innerHTML = `
+                         //     <img src="./assets/img/success-svgrepo-com.svg"/>
+                         //     <p style="color: #00cc66;">Form Submitted Successfully</p>
+                         //     <p>Thank you! The form has been submitted successfully. We will reply to you soon!</p>
+                         // `;
+                     } else {
+                         console.log(response);
+                         modalBody.style.display = "none";
+                         result.innerHTML = "Error sending message!";
+                     }
+                 })
+                 .catch(error => {
+                     console.log(error);
+                     modalBody.style.display = "none";
+                     result.innerHTML = "Something went wrong!";
+                 })
+                 .then(function() {
+                     // Reset form and hide result after 3 seconds
+                     form.reset();
+                     setTimeout(() => {
+                         result.style.display = "none";
+                        // modalBody.style.display = "block";
+                     }, 3000);
+                 });
+         });
+
+
+         contform.addEventListener('submit', function(e) {
+            formData = new FormData(contform);
             e.preventDefault();
-        
+
              object = Object.fromEntries(formData);
              json = JSON.stringify(object);
-        
+
             // Display loading message while submitting
             formresult.innerHTML = "Please wait...";
             formresult.style.textAlign = "center";
-            form.style.marginTop = "15px";
-            form.style.textAlign = "center";
-            form.style.marginBottom = "37px"
-            form.style.display = "block";
-            form.style.color = "#00C064";
-        
+           formresult.style.marginTop = "15px";
+            formresult.style.textAlign = "center";
+            formresult.style.marginBottom = "37px"
+            formresult.style.display = "block";
+            formresult.style.color = "#00C064";
+
             fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: {
@@ -833,28 +835,29 @@
                         // `;
                     } else {
                         console.log(response);
-                        modalBody.style.display = "none";
-                        form.innerHTML = "Error sending message!";
+                        contmodalBody.style.display = "none";
+                        result.innerHTML = "Error sending message!";
                     }
                 })
                 .catch(error => {
                     console.log(error);
-                    modalBody.style.display = "none";
-                    form.innerHTML = "Something went wrong!";
+                    contmodalBody.style.display = "none";
+                    result.innerHTML = "Something went wrong!";
                 })
                 .then(function() {
                     // Reset form and hide result after 3 seconds
-                    form.reset();
+                    contform.reset();
                     setTimeout(() => {
-                        form.style.display = "none";
-                        // modalBody.style.display = "block";
+                        formresult.style.display = "none";
+                       // modalBody.style.display = "block";
                     }, 3000);
                 });
-        });*/
+        });
+
+       
 
 
-
-        contform.addEventListener('submit', function (e) {
+        /*contform.addEventListener('submit', function (e) {
             e.preventDefault();
 
             const full_name = document.getElementById('Full_name').value;
@@ -957,7 +960,7 @@
                 }
             );
         });
-
+*/
         /*formSubmit.addEventListener('submit', function (e) {
             e.preventDefault();
 
