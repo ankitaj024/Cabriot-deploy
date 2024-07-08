@@ -753,7 +753,7 @@
                         <!-- Phone number input-->
                         <div class="form-floating mb-3">
                             <input class="form-control" id="phone" type="tel" name="Contact"
-                                placeholder="(123) 456-7890" required />
+                                placeholder="(123) 456-7890" required pattern="\d{10}" title="Please enter exactly 10 digits" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)"/>
                             <label for="phone">Phone number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
                             </div>
@@ -979,31 +979,35 @@
         `;
 
             // Display loading message while submitting
-            const navresult = document.getElementById('nav-result'); // Assuming you have an element with this ID
-            navresult.innerHTML = "Please wait...";
-            navresult.style.textAlign = "center";
+            const messagePara = document.createElement('p');
+            messagePara.textContent = "Please wait...";
+            messagePara.style.textAlign = "center";
+          
+            // Assuming you have a container element with ID 'nav-result'
+            const navresult = document.getElementById('nav-result');
+          
+            // Display loading message while submitting
+            navresult.appendChild(messagePara); 
 
             Email.send({
                 SecureToken: "5af1ed71-f4ed-419f-b932-f4ec2fb66ab6",  // Replace with your actual secure token
-                To: 'knjangir24@gmail.com',
-                From: "knjangir24@gmail.com",
+                To: 'shebin@wolfpackdigi.com',
+                From: "shebin@wolfpackdigi.com",
                 Subject: "Welcome to Wolfpack",
                 Body: body
             }).then(
                 message => {
-                    navresult.innerHTML = "Form Submitted Successfully ";
-                    // Reset form and hide result after 3 seconds
-                    formSubmit.reset();
-                    setTimeout(() => {
-                        navresult.innerHTML = ""
-                        navresult.style.display = "none";
-                    }, 3000);
+                  messagePara.textContent = "Form Submitted Successfully ";
+                  // Reset form and hide result after 3 seconds (optional)
+                  formSubmit.reset();
+                  setTimeout(() => {
+                    messagePara.style.display = "none";
+                  }, 3000);
                 },
                 error => {
-                    console.log(error);
-                    navresult.innerHTML = "Error sending message!";
+                  messagePara.textContent = "Error sending message!";
                 }
-            );
+              );
         });
 
         /*formSubmit.addEventListener('submit', function (e) {
