@@ -673,7 +673,7 @@
                                 <label style="padding-left: 2.5rem; font-size:1rem" for="Location">Location</label>
                             </div>
                             <div class="col-md-6 mb-3 px-4 ">
-                                <select name="type_of_service" id="type_of_service" class="  form-control Place rounded-3 p-3" aria-label="Type of Service" required>
+                                <select name="type_of_service" id="type_of_service" class="  form-control Place rounded-3 p-3" aria-label="Type of Service"  required>
                                     <option value="">Select Type of Service</option>
                                     <option value="catering"> Mess Service</option>
                                     <option value="personal_chef">Corporate Event 
@@ -684,8 +684,8 @@
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3 px-4 form-floating">
-                                <input type="number" name="no_of_guest" id="no_of_guest" class="form-control Place rounded-3 " placeholder="" required>
-                                <label style="padding-left: 2.5rem; font-size:1rem; padding-bottom:2rem" for="Number Of Guest / Tenants">Number Of Guest / Tenants</label>
+                                <input type="number" name="no_of_guest" id="no_of_guest" class="form-control Place rounded-3" placeholder="" required min="1" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '');">
+                                <label style="padding-left: 2.5rem; font-size:1rem; padding-bottom:2rem" for="no_of_guest">Number Of Guests / Tenants</label>
                             </div>
                             <div class="form-floating mb-3 px-4">
                                 <textarea class="form-control Place" id="message" type="text" name="Message"
@@ -760,7 +760,7 @@
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" name="Message"
+                            <textarea class="form-control" id="contmessage" type="text" name="Message"
                                 placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                             <label for="message">Message</label>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
@@ -965,7 +965,7 @@
             const name = document.getElementById('name').value;
             const mobile = document.getElementById('phone').value;
             const mail = document.getElementById('mail').value;
-            const contmessage = document.getElementById('message').value;
+            const contmessage = document.getElementById('contmessage').value;
 
             const body = `
           <b>FullName : </b>${name}
@@ -985,7 +985,7 @@
 
             Email.send({
                 SecureToken: "5af1ed71-f4ed-419f-b932-f4ec2fb66ab6",  // Replace with your actual secure token
-                To: 'shebin@wolfpackdigi.com',
+                To: 'knjangir24@gmail.com',
                 From: "knjangir24@gmail.com",
                 Subject: "Welcome to Wolfpack",
                 Body: body
