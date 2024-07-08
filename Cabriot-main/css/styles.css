@@ -95,9 +95,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
   display: none;
-}
+} */
 
 hr {
   margin: 1rem 0;
@@ -11148,9 +11148,9 @@ html {
   background: url('./assets/img/c_blue.svg') ;
   transform: rotate(-155.04deg);
 } */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   display: none;
-}
+} */
 .blue-background{
   position: relative;
   width: 300px; 
