@@ -653,12 +653,11 @@
                 <div class="col-lg-8 text-center ">
                     <h2 class="display-4 py-6 fw-semibold">Get Started <span class="today">Today</span>&#33;</h2>
                     <p class="lead text-muted custom-paragraph1">Your culinary journey begins with us. Fill out the form and let's create something extraordinary together!</p>
-                    <form action="" id="contform">
+                    <form action="" method = "POST" id="contform">
                         <div class="row g-3">
-                            <div class="col-md-6 mb-1 px-4">
+                            <div class="col-md-6 mb-1 px-4 form-floating">
                                 <input type="text" name="name" id="Full_name" class="form-control form2 Place rounded-3 p-3" placeholder="Full Name" required>
                                 <label for="Full_name"></label>
-                                
                                 <!-- <input class="form-control" id="name" name="Name" type="text"
                                 placeholder="Enter your name..." required />
                             <label for="name">Full name</label>
@@ -941,23 +940,19 @@
                 Body: body
             }).then(
                 message => {
-                  if (message === 'OK') {
                     formresult.innerHTML = "Form Submitted Successfully ";
-                    contform.reset(); // Reset form after displaying message
-                    setTimeout(() => { 
-                        formresult.innerHTML = "";
-                      formresult.style.display = "none";
+                    // Reset form and hide result after 3 seconds
+                    contform.reset();
+                    setTimeout(() => {
+                        formresult.innerHTML = ""
+                        result.style.display = "none";
                     }, 3000);
-                  } else {
-                    console.error("Unexpected response from email service:", message);
-                    formresult.innerHTML = "Error sending message!";
-                  }
                 },
                 error => {
-                  console.error("Error sending email:", error);
-                  formresult.innerHTML = "Error sending message!";
+                    console.log(error);
+                    result.innerHTML = "Error sending message!";
                 }
-              );
+            );
         });
 
         formSubmit.addEventListener('submit', function (e) {
@@ -996,6 +991,7 @@
                     // Reset form and hide result after 3 seconds
                     formSubmit.reset();
                     setTimeout(() => {
+                        result.innerHTML = " ";
                         result.style.display = "none";
                     }, 3000);
                 },
