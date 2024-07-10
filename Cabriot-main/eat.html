@@ -214,6 +214,7 @@
     </div>
 
 
+    <!--  Bulk Order Section-->
     <section class="masthead about-cabriot" style="padding-top: 5rem; background-color: #ffffff;">
         <div class="container px-5">
             <div class="row gx-5 align-items-center reverse-columns">
@@ -251,13 +252,15 @@
     </section>
 
 
+
+    <!-- Three Coloum Section-->
     <section class="masthead home-background pt-5 pb-5" style="background-position: 0 0; background-color:#F8F9FA;">
         <div class="container py-0 px-4">
             <div class="row gx-5 ">
                 <div class="col-lg-4 mb-4 mb-lg-0" style="padding-right: calc(var(--bs-gutter-x) * 0.5); padding-left:calc(var(--bs-gutter-x) * 0.5)" >
                     <div>
                         <img src="./assets/img/1.png" alt="Logo 1" class="img-fluid mb-3 me-sm-0"
-                            style="height: 5rem; width: 5rem;">
+                            style="height: 5rem; width: 4rem;">
                     </div>
                     <h3 >Office Lunch</h3>
                     <p style="font-weight: 400;">Embrace eco-friendly dining with Cabriot Eat’s office lunch in a tiffin box.</p>
@@ -286,6 +289,7 @@
     
 
 
+    <!--Kitche  Section-->
     <section class="masthead about-cabriot" style="padding-top: 3rem; background-color: #ffffff;">
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
@@ -311,6 +315,8 @@
         </div>
     </section>
 
+
+    <!-- Second 3 Coloum Section-->
     <section class="masthead home-background pt-5 pb-5" style="background-position: 0 0; background-color:#F8F9FA;">
         <div class="container py-0 px-4">
             <div class="row gx-5 ">
@@ -348,11 +354,7 @@
     </section>
     
     
-
-
-
-
-
+    <!-- Menu Section-->
     <section class="masthead about-cabriot" style="padding-top: 3rem; background-color: #ffffff;">
         <div class="container px-5">
             <div class="row gx-5 align-items-center reverse-columns">
@@ -372,6 +374,8 @@
         </div>
     </section>
 
+
+    <!-- Third 3 Coloum Section-->
     <section class="masthead home-background pt-5 pb-5" style="background-position: 0 0; background-color:#F8F9FA;">
         <div class="container py-0 px-4">
             <div class="row gx-5 ">
@@ -406,6 +410,7 @@
     </section>
     
 
+    <!-- Refining Magic section-->
     <section class="masthead about-cabriot" style="padding-top: 3rem; background-color: #ffffff;">
         <div class="container px-5">
             <div class="row gx-5 align-items-center reverse-columns">
@@ -433,8 +438,7 @@
 
 
 
-    <!-- End-->
-
+    <!-- Cetification and Hygen Section-->
     <section class="masthead home-background" style=" background-color: #F8F9FA; background-position: 0 0; padding-top:5rem">
         <div class="container px-5" >
             <div class="row gx-5 align-items-center ">
@@ -466,7 +470,7 @@
 
 
 
-
+    <!-- Footer Contact Form-->
     <section id="contactFormSection" class="bg-white" style="padding-top: 5rem; padding-bottom:5rem">
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row justify-content-center w-100">
@@ -556,6 +560,9 @@
     <a href="https://wa.me/+918714858555" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
         <i class="fa fa-whatsapp whatsapp-icon"></i>
     </a>
+    <!-- End Of Eat Page Section-->
+
+
     <!-- Feedback Modal-->
     <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -739,161 +746,6 @@
                     }, 3000);
                 });
         });
-
-       
-
-
-        /*contform.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const full_name = document.getElementById('Full_name').value;
-            const mobile_no = document.getElementById('mobile_no').value;
-            const location = document.getElementById('location').value;
-            const email = document.getElementById('email').value;
-            const type_of_service = document.getElementById('type_of_service').value;
-            const message = document.getElementById('message').value;
-
-            const body = `
-          <b>FullName : </b>${full_name}
-          <br/>
-          <b>Email : </b>${email} 
-          <br/>
-          <b>mobile No : </b>${mobile_no}
-          <br/>
-          <b>Location : </b>${location}
-          <br/>
-          <b>Type of Service : </b>${type_of_service}
-          <br>
-          <b>Message : </b>${message}
-          <br>
-        `;
-
-            // Display loading message while submitting
-            const formresult = document.getElementById('form-result'); // Assuming you have an element with this ID
-            formresult.innerHTML = "Please wait...";
-            formresult.style.textAlign = "center";
-
-            Email.send({
-                SecureToken: "5af1ed71-f4ed-419f-b932-f4ec2fb66ab6",  
-                To: 'shebin@wolfpackdigi.com',
-                From: "shebin@wolfpackdigi.com",
-                Subject: "Welcome to Wolfpack",
-                Body: body
-            }).then(
-                message => {
-                    formresult.innerHTML = "Form Submitted Successfully ";
-                    // Reset form and hide result after 3 seconds
-                    contform.reset();
-                    setTimeout(() => {
-                        formresult.innerHTML = ""
-                        result.style.display = "none";
-                    }, 3000);
-                },
-                error => {
-                    console.log(error);
-                    result.innerHTML = "Error sending message!";
-                }
-            );
-        });
-
-        formSubmit.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const mobile = document.getElementById('phone').value;
-            const mail = document.getElementById('mail').value;
-            const contmessage = document.getElementById('contmessage').value;
-
-            const body = `
-          <b>FullName : </b>${name}
-          <br/>
-          <b>Email : </b>${mail} 
-          <br/>
-          <b>mobile No : </b>${mobile}
-          <br/>
-          <b>Message : </b>${contmessage}
-          <br>
-        `;
-
-            // Display loading message while submitting
-            const messagePara = document.createElement('p');
-            messagePara.textContent = "Please wait...";
-            messagePara.style.textAlign = "center";
-
-            // Assuming you have a container element with ID 'nav-result'
-            const navresult = document.getElementById('nav-result');
-
-            // Display loading message while submitting
-            navresult.appendChild(messagePara);
-
-            Email.send({
-                SecureToken: "5af1ed71-f4ed-419f-b932-f4ec2fb66ab6",  // Replace with your actual secure token
-                To: 'shebin@wolfpackdigi.com',
-                From: "shebin@wolfpackdigi.com",
-                Subject: "Welcome to Wolfpack",
-                Body: body
-            }).then(
-                message => {
-                    messagePara.textContent = "Form Submitted Successfully ";
-                    // Reset form and hide result after 3 seconds (optional)
-                    formSubmit.reset();
-                    setTimeout(() => {
-                        messagePara.style.display = "none";
-                    }, 3000);
-                },
-                error => {
-                    messagePara.textContent = "Error sending message!";
-                }
-            );
-        });
-*/
-        /*formSubmit.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const full_name = document.getElementById('name').value;
-            const mobile_no = document.getElementById('phone').value;
-            const email = document.getElementById('mail').value;
-            const message = document.getElementById('message').value;
-
-            const body = `
-          <b>FullName : </b>${full_name}
-          <br/>
-          <b>Email : </b>${email} 
-          <br/>
-          <b>mobile No : </b>${mobile_no}
-          <br/>
-          <b>Message : </b>${message}
-          <br>
-        `;
-
-            // Display loading message while submitting
-            const navresult = document.getElementById('nav-result'); // Assuming you have an element with this ID
-            navresult.innerHTML = "Please wait...";
-            navresult.style.textAlign = "center";
-
-            Email.send({
-                SecureToken: "5af1ed71-f4ed-419f-b932-f4ec2fb66ab6",  // Replace with your actual secure token
-                To: ' shebin@wolfpackdigi.com',
-                From: "knjangir24@gmail.com",
-                Subject: "Welcome to Wolfpack",
-                Body: body
-            }).then(
-                message => {
-                    navresult.innerHTML = "Form Submitted Successfully ";
-                    // Reset form and hide result after 3 seconds
-                    formSubmit.reset();
-                    setTimeout(() => {
-                        navresult.innerHTML = "";
-                        navresult.style.display = "none";
-                    }, 3000);
-                },
-                error => {
-                    console.log(error);
-                    navresult.innerHTML = "Error sending message!";
-                }
-            );
-        });*/
-
 
 
     </script>
