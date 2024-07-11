@@ -92,3 +92,32 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// Get the element where you want to display the time
+const currentTimeElement = document.getElementById("current-time");
+
+// Function to format and display the time in 12-hour format with seconds
+function displayTime() {
+  const now = new Date();
+
+  // Get hours in 12-hour format (0-11)
+  let hours = now.getHours() % 12 || 12;
+
+  // Get minutes in 2-digit format
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+
+  // Get seconds in 2-digit format
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+
+  // Get meridian indicator (AM or PM)
+  const meridian = now.getHours() >= 12 ? 'PM' : 'AM';
+
+  // Update the element's content with formatted time
+  currentTimeElement.textContent = `Time: ${hours}:${minutes}:${seconds} ${meridian}`;
+}
+
+// Call the displayTime function initially
+displayTime();
+
+// Update the time every second
+setInterval(displayTime, 1000); // Update every 1 second
+

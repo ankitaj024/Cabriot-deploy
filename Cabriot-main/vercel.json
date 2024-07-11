@@ -4,7 +4,8 @@
       { "source": "/stay", "destination": "/stay.html" },
       { "source": "/go", "destination": "/go.html" },
       { "source": "/xpress", "destination": "/xpress.html" },
-      { "source": "/", "destination": "/index.html" }
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/display", "destination": "/display.html" }
 
     ]
   }
