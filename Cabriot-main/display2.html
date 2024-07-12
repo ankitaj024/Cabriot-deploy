@@ -24,20 +24,8 @@
 
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        .card {
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-        }
-        .card img {
-            width: 60px;
-            height: 60px;
-        }
-        .card-title {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
         .card-footer {
-            background-color: #28a745;
+            background-color: #2ECC71;
             color: white;
             font-weight: bold;
             text-align: center;
@@ -45,7 +33,35 @@
             border-top: 1px solid #e0e0e0;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
+            text-align: right;
+            padding-right: 1rem;
         }
+        .vertical-line {
+            border-left: 2px solid #000; /* Adjust the color and width */
+            height: 100px; /* Adjust the height */
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            min-width: 300px;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+      
+
     </style>
 </head>
 
@@ -53,178 +69,264 @@
 
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar static-top" style="background-color: #2ECC71; height: 15vh;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./assets/img/cabriot_ventures.svg" alt="..." height="100%">
-            </a>
-            <span id="time"></span>
+    <nav class="container d-flex justify-content-between navbar navbar-expand-lg navbar-static-top"
+        style="background-color: #2ECC71; height: 15vh; max-width: 100%;">
+        <a style="height: 90%;" class="navbar-brand px-4" href="#">
+            <img src="./assets/img/cabriot_eat.svg" alt="..." height="100%" width="100%">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class="d-flex">
+                <div class="d-flex flex-column align-items-bottom mt-3 px-3">
+                    <h3 class="mb-1" style="font-size:1.1rem">SECTION</h3>
+                    <h2 style="color: white;">VEGITABLE</h2>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="d-flex flex-column align-items-bottom mt-3 px-4">
+                    <h3 class="mb-1" style="font-size:1.1rem">MEAL</h3>
+                    <h2 style="color: white;">BREAKFAST</h2>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="d-flex flex-column align-items-center px-4 mt-2">
+                    <span class="fw-semibold" style="font-size: 1.1rem; color:black" id="date"></span>
+                    <span class="fw-bold" style="font-size: 2rem; color:white" id="time"></span>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container " style="width: 90%;">
-        <div class="row align-items-center" style="height: 85vh;">
-            <div class=" col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center  ">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Tomato">
-                        <h5 class="card-title px-3">Tomato</h5>
+     
+    <div class="px-4 mx-auto bg-black" style="max-width: 100%; padding: 0;" >
+        <div class="row " style="height: 85vh;">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4">
+                <div  class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black  ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 1</h3>
                     </div>
-                    <div class="card-footer">
+                    <div style="color: black; font-size:1.5rem; " class="card-footer">
                         230 numbers
                     </div>
                 </div>
             </div>
-            <div class=" col-lg-3 col-md-3 col-sm-6  px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Onion">
-                        <h5 class="card-title px-3">Onion</h5>
-                    </div>
-                    <div class="card-footer">
-                        100 Kilograms
-                    </div>
-                </div>
-            </div>
-            <div class=" col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
-                    </div>
-                    <div class="card-footer">
-                        230
-                    </div>
-                </div>
-            </div>
-            <div class=" col-lg-3 col-md-3 col-sm-6 px-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4 ">
                 <div class="card h-100">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 2</h3>
                     </div>
-                    <div class="card-footer">
-                        230
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat the Chappathi card for additional cards -->
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
-                    </div>
-                    <div class="card-footer">
-                        230
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6  px-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4 ">
                 <div class="card h-100">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 3</h3>
                     </div>
-                    <div class="card-footer">
-                        230
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
-                    </div>
-                    <div class="card-footer">
-                        230
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
-                    </div>
-                    <div class="card-footer">
-                        230
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
-                    </div>
-                    <div class="card-footer">
-                        230
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4">
                 <div class="card h-100">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 4</h3>
                     </div>
-                    <div class="card-footer">
-                        230
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 5</h3>
                     </div>
-                    <div class="card-footer">
-                        230
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 px-2">
-                <div class="card h-100 ">
-                    <div class="card-body d-flex align-items-center">
-                        <img class="rounded-circle bg-success" src="https://via.placeholder.com/60" alt="Chappathi">
-                        <h5 class="card-title px-3">Chappathi</h5>
-                    </div>
-                    <div class="card-footer">
-                        230
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 6</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 7</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 8</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black  ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 9</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 10</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 11</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 12</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div> -->
+           
         </div>
+    </div>
         <!-- /.row -->
-    
+
         <!-- Section Heading -->
 
-    
+
         <!-- Pagination -->
     </div>
-    
+
     <!-- /.container -->
 
 
     <script>
-        // Get the time element
+        function adjustCardLayout() {
+            const cards = document.querySelectorAll('.col-lg-3, .col-md-4, .col-sm-6');
+            const cardCount = cards.length;
+
+            // Reset row centering
+            const row = document.querySelector('.row');
+            const cardw = document.querySelector('.card');
+            row.style.justifyContent = '';
+
+            if (cardCount <= 2) {
+                // Each row should have 1 card and centered
+                row.style.justifyContent = 'center';
+
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6');
+                    card.classList.add('col-lg-6', 'col-md-6');
+                });
+            } else if (cardCount <= 4) {
+                // Each row should have 2 cards and centered
+                row.style.justifyContent = 'center';
+                row.style.alignItem - 'center'
+
+                //row.style.margin = "5rem"
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6');
+                    card.classList.add('col-lg-6', 'col-md-6');
+                });
+            } else if (cardCount <= 6) {
+                // Each row should have 3 cards
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
+                    card.classList.add('col-lg-4', 'col-md-6', 'mt-5', 'mb-4');
+                });
+            } else if (cardCount <= 9) {
+                // Each row should have 4 cards
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-6', 'col-md-6','mt-4', 'mb-4');
+                    card.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
+                });
+            } else {
+                // More than 9 cards, keep the default layout
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-6', 'col-md-6', 'col-lg-4');
+                    card.classList.add('col-lg-3', 'col-md-4', 'col-sm-6');
+                });
+            }
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', adjustCardLayout);
+
+        // Get the date and time elements
+        const dateElement = document.getElementById('date');
         const timeElement = document.getElementById('time');
+
+        // Function to update the date
+        function updateDate() {
+            const currentDate = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
+        }
 
         // Function to update the time
         function updateTime() {
-            const now = new Date();
-            const formattedTime = now.toLocaleTimeString();
-            timeElement.textContent = formattedTime;
+            const currentTime = new Date();
+            const options = { hour: '2-digit', minute: '2-digit' };
+            timeElement.textContent = currentTime.toLocaleTimeString(undefined, options);
         }
 
-        // Update the time initially and then every second
+        // Initial update
+        updateDate();
         updateTime();
+
+        // Update the time every second
         setInterval(updateTime, 1000);
-    </script>
+        </script>
 </body>
 
 </html>
