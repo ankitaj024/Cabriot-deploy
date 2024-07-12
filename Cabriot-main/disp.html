@@ -46,68 +46,31 @@
             /* Adjust the margin as needed */
         }
 
-        @media (max-width: 768px) {
-            .vertical-line {
-                border-left: none;
-                border-top: 2px solid #000;
-                height: auto;
-                width: 100%;
-                margin: 10px 0;
-            }
-
-            .navbar-brand img {
-                height: 60%;
-            }
-
-            .navbar h3,
-            .navbar h2 {
-                font-size: 1rem;
-            }
-
-            .navbar h2 {
-                font-size: 1.5rem;
-            }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
-        .navbar {
-            background-color: #2ECC71;
-            height: 15vh;
-            max-width: 100%;
+        .card {
+            min-width: 300px;
         }
 
-        .navbar-brand img {
-            height: 90%;
+        .centered {
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
 
-        .card-body {
-            color: white;
-            border: 2.5px solid white;
-            border-bottom: none;
-            border-radius: 3px;
+        .spacer {
+            flex: 1;
         }
-
-        .bg-black {
-            background-color: black;
+        .custom-mt-6{
+            margin-top: 4rem;
         }
-
-        .rounded-circle {
-            border-radius: 50%;
+        .custom-mb-6{
+            margin-bottom: 4rem;
         }
-        .custom-mb-7 {
-            margin-bottom: 7rem; /* Adjust as needed */
-        }
-    
-        .custom-mt-7 {
-            margin-top: 7rem; /* Adjust as needed */
-        }
-        .custom-mb-2card {
-            margin-bottom: 15rem; /* Adjust as needed */
-        }
-    
-        .custom-mt-2card {
-            margin-top: 15rem; /* Adjust as needed */
-        }
-        
     </style>
 </head>
 
@@ -148,170 +111,158 @@
 
     <!-- Page Content -->
 
-    <div class="  px-4 mx-auto bg-black" style="max-width: 100%; padding: 0;">
-        <div class="row " style="height: 85vh;">
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4">
-                <div class="card h-100 ">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black  ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black; font-size:2em; " class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4 ">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4 ">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-4">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div>
-           <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-             </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
-                <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
-                    </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
-                        230 numbers
-                    </div>
-                </div>
-            </div> 
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
+    <div class="px-5 mx-auto bg-black" style="max-width: 100%; padding: 0;">
+        <div class="row ">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
                         class="card-body d-flex align-items-center bg-black  ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="20%"
                             height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
+                        <h3 class="card-title px-3">Tomato 1</h3>
                     </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
+                    <div style="color: black; font-size:1.5rem; " class="card-footer">
                         230 numbers
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4 ">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
+                        class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="20%"
+                            height="auto">
+                        <h3 class="card-title px-3">Tomato 2</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4 ">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
+                        class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="20%"
+                            height="auto">
+                        <h3 class="card-title px-3">Tomato 2</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4 ">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
+                        class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="20%"
+                            height="auto">
+                        <h3 class="card-title px-3">Tomato 2</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+<!--<div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
                         class="card-body d-flex align-items-center bg-black ">
                         <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
                             height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
+                        <h3 class="card-title px-3">Tomato 5</h3>
                     </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
                         230 numbers
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
+           <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
                         class="card-body d-flex align-items-center bg-black ">
                         <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
                             height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
+                        <h3 class="card-title px-3">Tomato 6</h3>
                     </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>  -->
+            <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 7</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
                         230 numbers
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
                 <div class="card h-100">
-                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
-                        class="card-body d-flex align-items-center bg-black ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%"
-                            height="auto">
-                        <h3 class="card-title px-3">Tomato</h3>
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 8</h3>
                     </div>
-                    <div style="color: black;font-size:2rem;" class="card-footer">
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
                         230 numbers
                     </div>
                 </div>
-            </div> 
- -->
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black  ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 9</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 10</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 11</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
+                <div class="card h-100">
+                    <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;" class="card-body d-flex align-items-center bg-black ">
+                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 class="card-title px-3">Tomato 12</h3>
+                    </div>
+                    <div style="color: black;font-size:1.5rem;" class="card-footer">
+                        230 numbers
+                    </div>
+                </div>
+            </div>  -->
+
         </div>
     </div>
-    <!-- /.row
+    <!-- /.row -->
 
-     Section Heading -->
+    <!-- Section Heading -->
 
 
     <!-- Pagination -->
@@ -327,61 +278,71 @@
 
             // Reset row centering
             const row = document.querySelector('.row');
-
-            if (cardCount <= 2) {
+           
+            row.style.justifyContent = 'center';
+              if (cardCount == 2) {
                 // Each row should have 1 card and centered
+                row.style.display = 'flex';
                 row.style.justifyContent = 'center';
-                row.style.paddingRight = "20rem";
-                row.style.paddingLeft = "20rem";
-
-                cards.forEach((card, index) => {
-                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4', 'px-2');
-                    card.classList.add('col-lg-6', 'col-md-6', 'px-3');
-                    
-                        card.classList.add('custom-mb-2card' , 'custom-mt-2card');
-                });
-            } else if (cardCount <= 4) {
-                // Each row should have 2 cards and centered
-                row.style.justifyContent = 'center';
-                row.style.alignItem = 'center';
-                //row.style.paddingRight = "16rem";
-                //row.style.paddingLeft = "16rem";
+                row.style.alignItems = 'center';
+                row.style.height = '85vh';
                 
+
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6');
+                    card.classList.add('col-lg-6', 'col-md-6');
+                });
+            } else if (cardCount ==3) {
+                // Each row should have 2 cards and centered
+                row.style.display = 'flex';
+               row.style.justifyContent = 'center';
+                //row.style.justifyContent = 'center';
+                row.style.alignItems = 'center';
+                row.style.height = '85vh';
+
                 //row.style.margin = "5rem"
                 cards.forEach((card, index) => {
-                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4', 'px-2');
-                    card.classList.add('col-lg-6', 'col-md-6', 'px-3' );
-                    if (index < 2) {
-                        card.classList.add('mb-3' , 'mt-5');
-                    } else {
-                        card.classList.add('mb-5', 'mt-4');
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
+                    card.classList.add('col-lg-6', 'col-md-6');
+                    if(index<2){
+                        card.classList.add('custom-mt-6', 'mb-5')
+                    }
+                    else{
+                        card.classList.add('custom-mb-6','mt-0')
                     }
                 });
-            } else if (cardCount <= 6) {
-                // Each row should have 3 cards
+            } 
+            else if (cardCount ==4) {
+                // Each row should have 2 cards and centered
+                row.style.display = 'flex';
+               row.style.justifyContent = 'center';
+                //row.style.justifyContent = 'center';
+                row.style.alignItems = 'center';
+                row.style.height = '85vh';
+
+                //row.style.margin = "5rem"
                 cards.forEach((card, index) => {
-                    // Remove existing margin classes
-                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4', 'px-2');
-                    // Add new classes for responsive layout
-                    card.classList.add('col-lg-4', 'col-md-6', 'px-3');
-        
-                    // Set bottom margin based on the card index
-                    if (index < 3) {
-                        card.classList.add('mb-3' , 'mt-5');
-                    } else {
-                        card.classList.add('mb-5', 'mt-4');
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
+                    card.classList.add('col-lg-6', 'col-md-6');
+                    if(index<2){
+                        card.classList.add('custom-mt-6', 'mb-5')
                     }
+                    else{
+                        card.classList.add('custom-mb-6','mt-0')
+                    }
+                });
+            } 
+            else if (cardCount <= 6) {
+                // Each row should have 3 cards
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
+                    card.classList.add('col-lg-4', 'col-md-6', 'mt-5', 'mb-4');
                 });
             } else if (cardCount <= 9) {
                 // Each row should have 4 cards
-                cards.forEach((card, index)=> {
-                    card.classList.remove('col-lg-6', 'col-md-6','mt-4', 'mb-4', 'px-2');
-                    card.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'px-3');
-                    if (index < 4) {
-                        card.classList.add('mb-3' , 'custom-mt-7');
-                    } else {
-                        card.classList.add('custom-mb-7', 'mt-4');
-                    }
+                cards.forEach(card => {
+                    card.classList.remove('col-lg-6', 'col-md-6', 'mt-4', 'mb-4');
+                    card.classList.add('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
                 });
             } else {
                 // More than 9 cards, keep the default layout
@@ -392,6 +353,28 @@
             }
         }
 
+        function setupObserver() {
+            const row = document.querySelector('.row');
+        
+            if (row) {
+                const observer = new MutationObserver((mutationsList) => {
+                    for (const mutation of mutationsList) {
+                        if (mutation.type === 'childList') {
+                            adjustCardLayout(); // Reapply layout adjustments
+                        }
+                    }
+                });
+        
+                observer.observe(row, { childList: true });
+            } else {
+                console.warn('.row element not found.');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            adjustCardLayout();
+            setupObserver();
+        });
+        
         // Call the function when the page loads
         document.addEventListener('DOMContentLoaded', adjustCardLayout);
 
@@ -419,7 +402,7 @@
 
         // Update the time every second
         setInterval(updateTime, 1000);
-        </script>
+    </script>
 </body>
 
 </html>
