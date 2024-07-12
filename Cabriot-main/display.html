@@ -292,7 +292,7 @@
                     card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6');
                     card.classList.add('col-lg-6', 'col-md-6');
                 });
-            } else if (cardCount <= 4) {
+            } else if (cardCount ==3) {
                 // Each row should have 2 cards and centered
                 row.style.display = 'flex';
                row.style.justifyContent = 'center';
@@ -311,7 +311,28 @@
                         card.classList.add('custom-mb-6','mt-0')
                     }
                 });
-            } else if (cardCount <= 6) {
+            } 
+            else if (cardCount ==4) {
+                // Each row should have 2 cards and centered
+                row.style.display = 'flex';
+               row.style.justifyContent = 'center';
+                //row.style.justifyContent = 'center';
+                row.style.alignItems = 'center';
+                row.style.height = '85vh';
+
+                //row.style.margin = "5rem"
+                cards.forEach((card, index) => {
+                    card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
+                    card.classList.add('col-lg-6', 'col-md-6');
+                    if(index<2){
+                        card.classList.add('custom-mt-6', 'mb-5')
+                    }
+                    else{
+                        card.classList.add('custom-mb-6','mt-0')
+                    }
+                });
+            } 
+            else if (cardCount <= 6) {
                 // Each row should have 3 cards
                 cards.forEach(card => {
                     card.classList.remove('col-lg-3', 'col-md-4', 'col-sm-6', 'mt-4', 'mb-4');
@@ -332,6 +353,28 @@
             }
         }
 
+        function setupObserver() {
+            const row = document.querySelector('.row');
+        
+            if (row) {
+                const observer = new MutationObserver((mutationsList) => {
+                    for (const mutation of mutationsList) {
+                        if (mutation.type === 'childList') {
+                            adjustCardLayout(); // Reapply layout adjustments
+                        }
+                    }
+                });
+        
+                observer.observe(row, { childList: true });
+            } else {
+                console.warn('.row element not found.');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            adjustCardLayout();
+            setupObserver();
+        });
+        
         // Call the function when the page loads
         document.addEventListener('DOMContentLoaded', adjustCardLayout);
 
