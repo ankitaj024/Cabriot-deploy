@@ -139,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4 ">
+             <div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4 ">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
                         class="card-body d-flex align-items-center bg-black ">
@@ -152,7 +152,7 @@
                     </div>
                 </div>
             </div>
-            <<div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
+            <!--<div class="col-lg-3 col-md-4 col-sm-6 px-5 mb-4 mt-4">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:3px;"
                         class="card-body d-flex align-items-center bg-black ">
@@ -278,10 +278,9 @@
 
             // Reset row centering
             const row = document.querySelector('.row');
-
+           
             row.style.justifyContent = 'center';
-
-            if (cardCount == 2) {
+              if (cardCount == 2) {
                 // Each row should have 1 card and centered
                 row.style.display = 'flex';
                 row.style.justifyContent = 'center';
@@ -296,7 +295,7 @@
             } else if (cardCount <= 4) {
                 // Each row should have 2 cards and centered
                 row.style.display = 'flex';
-                //row.style.justifyContent = 'center';
+               row.style.justifyContent = 'center';
                 //row.style.justifyContent = 'center';
                 row.style.alignItems = 'center';
                 row.style.height = '85vh';
