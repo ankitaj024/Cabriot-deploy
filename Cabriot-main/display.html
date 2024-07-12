@@ -252,9 +252,11 @@
         
             // Reset row centering
             const row = document.querySelector('.row');
-            row.style.justifyContent = '';
-        
-            if (cardCount <= 2) {
+            if(cardCount==1){
+            row.style.justifyContent = 'center';
+            row.style.width = '100%';
+            }
+            if (cardCount ==2) {
                 // Each row should have 1 card and centered
                 row.style.justifyContent = 'center';
                 cards.forEach(card => {
