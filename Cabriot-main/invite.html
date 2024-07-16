@@ -135,7 +135,7 @@
 
 
         p {
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             font-family: 'MyCustomFont, sans-serif';
             font-style: italic;
             margin-top: -3rem !important;
@@ -193,6 +193,13 @@
           .italic-text {
             font-style: italic;
         }
+        .form-section {
+            max-width: 43rem; /* Adjust the width of the form */
+            margin: auto;
+        }
+        .display-6{
+            font-size: 2.9rem;
+          }
         @media (max-width:500px) {
 
             .content h1 {
@@ -280,16 +287,15 @@
             </div>
         </div>
     </div> -->
-    <div class="container mb-5 justify-content-center " style="max-width: 78%;" >
+    <div class="container mb-5" style="max-width: 78%;">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7">
-                <p class="px-3"  >
+                <p class="px-3 text-left" style="text-align: justify;">
                     Be a part of Cabriot Eat's vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Let's make it a night to remember!
                 </p>
             </div>
         </div>
     </div>
-
     
 
 
@@ -325,7 +331,7 @@
     <div id="contactFormSection" class="bg-white" style="padding-top: 2rem; padding-bottom:2rem">
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row justify-content-center w-100">
-                <div class="col-lg-8 text-center ">
+                <div class="col-lg-8 text-center form-section">
                     <h2 class="display-6 py-6 fw-semibold mb-5"> RSVP to Reserve Your Spot</span>&#33;</h2>
                     <form id="contform">
                         <div class="row g-3">
@@ -370,7 +376,7 @@
                             </div>
                     </form>
                 </div>
-                <div id="form-result"></div>
+                <div id="form-result" class="text-center" style="display: none;"></div>
             </div>
         </div>
     </div>
@@ -473,7 +479,7 @@
             formresult.style.textAlign = "center";
             formresult.style.marginBottom = "37px"
             formresult.style.display = "block";
-            formresult.style.color = "#00C064";
+            formresult.style.color = "black";
 
             fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
@@ -486,7 +492,8 @@
                 .then(async (response) => {
                     let jsonResponse = await response.json();
                     if (response.status == 200) {  
-                        formresult.innerHTML = "Form Submitted Successfully 🎉";
+                        formresult.innerHTML = "<strong>Thank You for Your RSVP!</strong> <br>  We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there!";
+                        contform.style.display = "none"
                         // modalBody.style.display = "none";
                         // result.innerHTML = `
                         //     <img src="./assets/img/success-svgrepo-com.svg"/>
