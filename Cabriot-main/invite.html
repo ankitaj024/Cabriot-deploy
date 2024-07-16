@@ -517,17 +517,36 @@
             // Define event details
             const eventTitle = encodeURIComponent('Cabriot Eat Soft Launch');
             const eventLocation = encodeURIComponent('19/87 EAST KALLAI ROAD CHALAPURAM PO , 673002, CALICUT');
-            const eventDescription = encodeURIComponent('We are ecxited to See you there');
+            const eventDescription = encodeURIComponent('We are excited to see you there');
             const startDate = '2024-07-19T18:00:00'; // Adjust to your event start date/time
             const endDate = '2024-07-19T20:00:00'; // Adjust to your event end date/time
-        
+            
             // Construct Google Calendar URL
-            const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&location=${eventLocation}&details=${eventDescription}&dates=${startDate}/${endDate}`;
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&location=${eventLocation}&details=${eventDescription}&dates=${startDate}/${endDate}`;
+            
+            // Construct Outlook Calendar URL
+            const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${eventTitle}&location=${eventLocation}&body=${eventDescription}&startdt=${startDate}&enddt=${endDate}`;
+            
+            // Construct Apple Calendar URL (iCalendar format)
+            const appleCalendarUrl = `data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0ASUMMARY:${eventTitle}%0D%0ADESCRIPTION:${eventDescription}%0D%0ALOCATION:${eventLocation}%0D%0ADTSTART:${startDate.replace(/-|:|T/g, '')}Z%0D%0ADTEND:${endDate.replace(/-|:|T/g, '')}Z%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR`;
         
-            // Redirect to Google Calendar
-            window.open(calendarUrl, '_blank');
+            // Function to open the calendar link
+            function openCalendarLink(url) {
+                window.open(url, '_blank');
+            }
+        
+            // Check for the user's default calendar preference
+            if (navigator.userAgent.includes("Windows")) {
+                // Default to Outlook for Windows users
+                openCalendarLink(outlookCalendarUrl);
+            } else if (navigator.userAgent.includes("Macintosh")) {
+                // Default to Apple Calendar for Mac users
+                openCalendarLink(appleCalendarUrl);
+            } else {
+                // Default to Google Calendar for other users
+                openCalendarLink(googleCalendarUrl);
+            }
         }
-        
         
     </script>
     <script src="https://cdn.date-fns.org/v2.23.0/date-fns.min.js"></script>
