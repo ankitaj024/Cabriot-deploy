@@ -520,15 +520,27 @@
             const eventDescription = encodeURIComponent('Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!');
             const startDate = '2024-07-21T18:00:00'; // Adjust to your event start date/time
             const endDate = '2024-07-21T20:00:00'; // Adjust to your event end date/time
-            
+        
             // Construct Google Calendar URL
             const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&location=${eventLocation}&details=${eventDescription}&dates=${startDate}/${endDate}`;
-            
+        
             // Construct Outlook Calendar URL
             const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${eventTitle}&location=${eventLocation}&body=${eventDescription}&startdt=${startDate}&enddt=${endDate}`;
-            
-            // Construct Apple Calendar URL (iCalendar format)
-            const appleCalendarUrl = `data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0ABEGIN:VEVENT%0D%0ASUMMARY:${eventTitle}%0D%0ADESCRIPTION:${eventDescription}%0D%0ALOCATION:${eventLocation}%0D%0ADTSTART:${startDate.replace(/-|:|T/g, '')}Z%0D%0ADTEND:${endDate.replace(/-|:|T/g, '')}Z%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR`;
+        
+            // Construct Apple Calendar (iCalendar format)
+            const appleCalendarData = `BEGIN:VCALENDAR
+        VERSION:2.0
+        BEGIN:VEVENT
+        SUMMARY:${eventTitle}
+        DESCRIPTION:${eventDescription}
+        LOCATION:${eventLocation}
+        DTSTART:${startDate.replace(/-|:|T/g, '')}Z
+        DTEND:${endDate.replace(/-|:|T/g, '')}Z
+        END:VEVENT
+        END:VCALENDAR`;
+        
+            const appleCalendarBlob = new Blob([appleCalendarData], { type: 'text/calendar' });
+            const appleCalendarUrl = URL.createObjectURL(appleCalendarBlob);
         
             // Function to open the calendar link
             function openCalendarLink(url) {
@@ -551,6 +563,7 @@
                 openCalendarLink(googleCalendarUrl);
             }
         }
+        
         
         
     </script>
