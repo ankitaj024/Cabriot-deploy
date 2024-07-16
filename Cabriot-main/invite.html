@@ -515,17 +515,17 @@
 
         function addToCalendar() {
             // Define event details
-            const eventTitle = encodeURIComponent('Cabriot Eat Soft Launch');
-            const eventLocation = encodeURIComponent('19/87 EAST KALLAI ROAD CHALAPURAM PO , 673002, CALICUT');
-            const eventDescription = encodeURIComponent('Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!');
+            const eventTitle = 'Cabriot Eat Soft Launch';
+            const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
+            const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
             const startDate = '2024-07-21T18:00:00'; // Adjust to your event start date/time
             const endDate = '2024-07-21T20:00:00'; // Adjust to your event end date/time
         
             // Construct Google Calendar URL
-            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&location=${eventLocation}&details=${eventDescription}&dates=${startDate}/${endDate}`;
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDate.replace(/-|:|T/g, '')}/${endDate.replace(/-|:|T/g, '')}`;
         
             // Construct Outlook Calendar URL
-            const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${eventTitle}&location=${eventLocation}&body=${eventDescription}&startdt=${startDate}&enddt=${endDate}`;
+            const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&body=${encodeURIComponent(eventDescription)}&startdt=${startDate}&enddt=${endDate}`;
         
             // Construct Apple Calendar (iCalendar format)
             const appleCalendarData = `BEGIN:VCALENDAR
@@ -542,6 +542,16 @@
             const appleCalendarBlob = new Blob([appleCalendarData], { type: 'text/calendar' });
             const appleCalendarUrl = URL.createObjectURL(appleCalendarBlob);
         
+            // Function to create a hidden download link for the iCalendar file
+            function downloadCalendarFile(url, filename) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        
             // Function to open the calendar link
             function openCalendarLink(url) {
                 window.open(url, '_blank');
@@ -549,15 +559,12 @@
         
             // Check for the user's default calendar preference
             const userAgent = navigator.userAgent;
-            if (/iPhone|iPad|iPod/.test(userAgent)) {
-                // Default to Apple Calendar for iPhone, iPad, and iPod users
-                openCalendarLink(appleCalendarUrl);
+            if (/iPhone|iPad|iPod/.test(userAgent) || /Macintosh/.test(userAgent)) {
+                // Download iCalendar file for Apple devices
+                downloadCalendarFile(appleCalendarUrl, 'event.ics');
             } else if (/Windows/.test(userAgent)) {
                 // Default to Outlook for Windows users
                 openCalendarLink(outlookCalendarUrl);
-            } else if (/Macintosh/.test(userAgent)) {
-                // Default to Apple Calendar for Mac users
-                openCalendarLink(appleCalendarUrl);
             } else {
                 // Default to Google Calendar for other users
                 openCalendarLink(googleCalendarUrl);
