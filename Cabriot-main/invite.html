@@ -41,7 +41,6 @@
         section {
             position: relative;
             width: 100%;
-            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -188,10 +187,11 @@
           [class^="bi-"]::before, [class*=" bi-"]::before{
             vertical-align: 0.6em;
           }
+
+          .italic-text {
+            font-style: italic;
+        }
         @media (max-width:500px) {
-            section {
-                height: 42vh;
-            }
 
             .content h1 {
                 font-size: 2rem;
@@ -268,10 +268,10 @@
             <img src="assets/img/Cabriot-launch-logo.png" alt="">
         </div>
     </section>
-    <p class=" px-3 d-flex flex-column text-center mb-5">
-        <span> Be a part of Cabriot Eat's vibrant journey as we launch our </span>
-        <span> first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun </span>
-        <span> interactions with our team. Let's make it a night to remember!</span>
+    <p class="px-3 d-flex flex-column text-center mb-5 justify-content-center" style="font-style: italic;">
+        <span>Be a part of Cabriot Eat's vibrant journey as we launch our</span>
+        <span>first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun</span>
+        <span>interactions with our team. Let's make it a night to remember!</span>
     </p>
 
 
