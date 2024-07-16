@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 :root {
   --bs-blue: #2937f0;
@@ -74,6 +75,12 @@
   
 }
 
+@font-face {
+  font-family: 'MyCustomFont'; /* Name you choose for the font */
+  src: url('../fonts/Fontspring-DEMO-singel-semibolditalic.otf') format('opentype'); /* Adjust the path */
+  font-weight: 500; /* Specify weight if necessary */
+  font-style: italic; /* Specify style (normal, italic, etc.) */
+}
 
 
 
