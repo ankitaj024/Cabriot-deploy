@@ -185,7 +185,9 @@
             background: #00BF63;
             color: white;
           }
-
+          [class^="bi-"]::before, [class*=" bi-"]::before{
+            vertical-align: 0.6em;
+          }
         @media (max-width:500px) {
             section {
                 height: 35vh;
@@ -250,6 +252,9 @@
               }
               .display-4{
                 font-size: 1.4em;
+              }
+              [class^="bi-"]::before, [class*=" bi-"]::before{
+                vertical-align: 1em;
               }
         }
     </style>
