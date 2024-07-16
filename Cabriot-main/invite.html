@@ -512,14 +512,13 @@
         });
 
 
-
         function addToCalendar() {
             // Define event details
             const eventTitle = 'Cabriot Eat Soft Launch';
             const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
             const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
-            const startDate = '2024-07-21T18:00:00'; // Adjust to your event start date/time
-            const endDate = '2024-07-21T20:00:00'; // Adjust to your event end date/time
+            const startDate = '2024-07-21T18:00:00Z'; // Adjust to your event start date/time
+            const endDate = '2024-07-21T20:00:00Z'; // Adjust to your event end date/time
         
             // Construct Google Calendar URL
             const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDate.replace(/-|:|T/g, '')}/${endDate.replace(/-|:|T/g, '')}`;
@@ -534,12 +533,12 @@
         SUMMARY:${eventTitle}
         DESCRIPTION:${eventDescription}
         LOCATION:${eventLocation}
-        DTSTART:${startDate.replace(/-|:|T/g, '')}Z
-        DTEND:${endDate.replace(/-|:|T/g, '')}Z
+        DTSTART:${startDate.replace(/-|:|T/g, '')}
+        DTEND:${endDate.replace(/-|:|T/g, '')}
         END:VEVENT
         END:VCALENDAR`;
         
-            const appleCalendarBlob = new Blob([appleCalendarData], { type: 'text/calendar' });
+            const appleCalendarBlob = new Blob([appleCalendarData], { type: 'text/calendar;charset=utf-8' });
             const appleCalendarUrl = URL.createObjectURL(appleCalendarBlob);
         
             // Function to create a hidden download link for the iCalendar file
@@ -547,6 +546,7 @@
                 const link = document.createElement('a');
                 link.href = url;
                 link.download = filename;
+                link.style.display = 'none';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
