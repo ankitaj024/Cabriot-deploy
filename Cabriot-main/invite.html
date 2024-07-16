@@ -536,10 +536,14 @@
             }
         
             // Check for the user's default calendar preference
-            if (navigator.userAgent.includes("Windows")) {
+            const userAgent = navigator.userAgent;
+            if (/iPhone|iPad|iPod/.test(userAgent)) {
+                // Default to Apple Calendar for iPhone, iPad, and iPod users
+                openCalendarLink(appleCalendarUrl);
+            } else if (/Windows/.test(userAgent)) {
                 // Default to Outlook for Windows users
                 openCalendarLink(outlookCalendarUrl);
-            } else if (navigator.userAgent.includes("Macintosh")) {
+            } else if (/Macintosh/.test(userAgent)) {
                 // Default to Apple Calendar for Mac users
                 openCalendarLink(appleCalendarUrl);
             } else {
@@ -547,6 +551,7 @@
                 openCalendarLink(googleCalendarUrl);
             }
         }
+        
         
     </script>
     <script src="https://cdn.date-fns.org/v2.23.0/date-fns.min.js"></script>
