@@ -492,7 +492,7 @@
                 .then(async (response) => {
                     let jsonResponse = await response.json();
                     if (response.status == 200) {  
-                        formresult.innerHTML = "<strong>Thank You for Your RSVP!</strong> <br>  We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there!";
+                        formresult.innerHTML = "<strong>Thank You for Your RSVP!</strong> <br> <br>    We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there!";
                         contform.style.display = "none"
                         // modalBody.style.display = "none";
                         // result.innerHTML = `
@@ -571,7 +571,12 @@
             const userAgent = navigator.userAgent;
             if (/iPhone|iPad|iPod/.test(userAgent) || /Macintosh/.test(userAgent)) {
                 // Download iCalendar file for Apple devices
-                downloadCalendarFile(appleCalendarUrl, 'event.ics');
+                if (/iPhone|iPad|iPod/.test(userAgent)) {
+                    // For iPhone, add to calendar directly by opening the .ics file
+                    window.location.href = appleCalendarUrl;
+                } else {
+                    downloadCalendarFile(appleCalendarUrl, 'event.ics');
+                }
             } else if (/Windows/.test(userAgent)) {
                 // Default to Outlook for Windows users
                 openCalendarLink(outlookCalendarUrl);
@@ -580,6 +585,7 @@
                 openCalendarLink(googleCalendarUrl);
             }
         }
+        
         
         
         
