@@ -570,11 +570,14 @@
             // Check for the user's default calendar preference
             const userAgent = navigator.userAgent;
             if (/iPhone|iPad|iPod/.test(userAgent) || /Macintosh/.test(userAgent)) {
-                // Download iCalendar file for Apple devices
+                // For Apple devices
                 if (/iPhone|iPad|iPod/.test(userAgent)) {
-                    // For iPhone, add to calendar directly by opening the .ics file
-                    window.location.href = appleCalendarUrl;
+                    // Ask for permission to add to calendar
+                    if (confirm("Do you want to add this event to your calendar?")) {
+                        window.location.href = appleCalendarUrl; // Redirect to the .ics file to add to calendar
+                    }
                 } else {
+                    // For other Apple devices, download the .ics file
                     downloadCalendarFile(appleCalendarUrl, 'event.ics');
                 }
             } else if (/Windows/.test(userAgent)) {
@@ -585,6 +588,7 @@
                 openCalendarLink(googleCalendarUrl);
             }
         }
+        
         
         
         
