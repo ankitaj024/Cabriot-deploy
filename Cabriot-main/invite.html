@@ -579,8 +579,8 @@
             const eventTitle = 'Cabriot Eat Soft Launch';
             const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
             const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
-            const startDate = '2024-07-21T11:00:00Z'; // Adjust to your event start date/time
-            const endDate = '2024-07-21T13:00:00Z'; // Adjust to your event end date/time
+            const startDate = '2024-07-21T05:30:00Z'; // 11:00 AM IST corresponds to 5:30 AM UTC
+            const endDate = '2024-07-21T07:30:00Z'; // 1:00 PM IST corresponds to 7:30 AM UTC
 
             // Construct Google Calendar URL
             const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDate.replace(/-|:|T/g, '')}/${endDate.replace(/-|:|T/g, '')}`;
@@ -588,47 +588,11 @@
             // Construct Outlook Calendar URL
             const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&body=${encodeURIComponent(eventDescription)}&startdt=${startDate}&enddt=${endDate}`;
 
-            // Construct Apple Calendar (iCalendar format)
-            const appleCalendarData = `BEGIN:VCALENDAR
-        VERSION:2.0
-        BEGIN:VEVENT
-        SUMMARY:${eventTitle}
-        DESCRIPTION:${eventDescription}
-        LOCATION:${eventLocation}
-        DTSTART:${startDate.replace(/-|:|T/g, '')}
-        DTEND:${endDate.replace(/-|:|T/g, '')}
-        END:VEVENT
-        END:VCALENDAR`;
-
-            const appleCalendarUrl = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(appleCalendarData);
-
-            // Function to create a hidden download link for the iCalendar file
-            function downloadCalendarFile(url, filename) {
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = filename;
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }
-
-            // Function to open the calendar link
-            function openCalendarLink(url) {
-                window.open(url, '_blank');
-            }
-
             // Check for the user's default calendar preference
             const userAgent = navigator.userAgent;
             if (/iPhone|iPad|iPod/.test(userAgent) || /Macintosh/.test(userAgent)) {
-                // For Apple devices
-                if (/iPhone|iPad|iPod/.test(userAgent)) {
-                    // Redirect to the data URL to add to the iPhone calendar
-                    window.location.href = appleCalendarUrl;
-                } else {
-                    // For other Apple devices, download the .ics file
-                    downloadCalendarFile(appleCalendarUrl, 'event.ics');
-                }
+                // Default to Google Calendar for Apple devices
+                openCalendarLink(googleCalendarUrl);
             } else if (/Windows/.test(userAgent)) {
                 // Default to Outlook for Windows users
                 openCalendarLink(outlookCalendarUrl);
@@ -638,6 +602,10 @@
             }
         }
 
+        // Function to open the calendar link
+        function openCalendarLink(url) {
+            window.open(url, '_blank');
+        }
 
 
 
