@@ -610,7 +610,10 @@
             // Construct iCalendar content
             const icsContent = `BEGIN:VCALENDAR
         VERSION:2.0
+        PRODID:-//Cabriot Eat//EN
         BEGIN:VEVENT
+        UID:${Date.now()}@cabriot.eat
+        DTSTAMP:${new Date().toISOString().replace(/-|:|\.\d{3}/g, '')}
         SUMMARY:${eventTitle}
         LOCATION:${eventLocation}
         DESCRIPTION:${eventDescription}
