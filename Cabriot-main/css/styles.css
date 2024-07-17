@@ -77,7 +77,7 @@
 
 @font-face {
   font-family: 'MyCustomFont'; /* Name you choose for the font */
-  src: url('../fonts/SingelDemo-SemiBold.woff') format('woff'); /* Adjust the path */
+  src: url('../fonts/SingelDemo-SemiBold.otf') format('opentype'); /* Adjust the path */
   font-weight: 400; /* Specify weight if necessary */
   font-style: italic !important; /* Specify style (normal, italic, etc.) */
 }
