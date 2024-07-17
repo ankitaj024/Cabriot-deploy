@@ -587,32 +587,47 @@
                 });
         });
 
-
         function addToCalendar() {
             // Define event details
             const eventTitle = 'Cabriot Eat - Soft Launch at Calicut';
             const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
             const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
-
+        
             // Create dates in IST
             const startDateIST = new Date('2024-07-21T11:00:00+05:30');
             const endDateIST = new Date('2024-07-21T13:00:00+05:30');
-
+        
             // Format dates for Google Calendar (YYYYMMDDTHHMMSSZ)
             const startDateGoogle = startDateIST.toISOString().replace(/-|:|\.\d{3}/g, '');
             const endDateGoogle = endDateIST.toISOString().replace(/-|:|\.\d{3}/g, '');
-
+        
             // Construct Google Calendar URL
             const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDateGoogle}/${endDateGoogle}`;
-
+        
             // Construct Outlook Calendar URL
             const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&body=${encodeURIComponent(eventDescription)}&startdt=${startDateIST.toISOString()}&enddt=${endDateIST.toISOString()}`;
-
+        
+            // Construct iCalendar content
+            const icsContent = `BEGIN:VCALENDAR
+        VERSION:2.0
+        BEGIN:VEVENT
+        SUMMARY:${eventTitle}
+        LOCATION:${eventLocation}
+        DESCRIPTION:${eventDescription}
+        DTSTART:${startDateGoogle}
+        DTEND:${endDateGoogle}
+        END:VEVENT
+        END:VCALENDAR`;
+        
+            // Create a Blob from the iCalendar content
+            const icsBlob = new Blob([icsContent], { type: 'text/calendar' });
+            const icsUrl = URL.createObjectURL(icsBlob);
+        
             // Check for the user's default calendar preference
             const userAgent = navigator.userAgent;
             if (/iPhone|iPad|iPod/.test(userAgent) || /Macintosh/.test(userAgent)) {
-                // Default to Google Calendar for Apple devices
-                openCalendarLink(googleCalendarUrl);
+                // Default to iCalendar for Apple devices
+                openCalendarLink(icsUrl);
             } else if (/Windows/.test(userAgent)) {
                 // Default to Outlook for Windows users
                 openCalendarLink(outlookCalendarUrl);
@@ -621,11 +636,12 @@
                 openCalendarLink(googleCalendarUrl);
             }
         }
-
+        
         // Function to open the calendar link
         function openCalendarLink(url) {
             window.open(url, '_blank');
         }
+        
 
 
 
