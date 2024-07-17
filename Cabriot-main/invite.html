@@ -200,6 +200,9 @@
         .display-6{
             font-size: 2.9rem;
           }
+          .Para{
+            max-width: 78%;
+          }
         @media (max-width:500px) {
 
             .content h1 {
@@ -240,8 +243,8 @@
                 font-family: 'MyCustomFont, sans-serif';
             }
             .custom-btn{
-                width:17rem;
-                height: 5rem;
+                width:19rem;
+                height: 5.5rem;
                 
             }
             .Date{
@@ -256,7 +259,7 @@
             .btnd .btn{
                 margin-top: 0;
                 font-size:1rem;
-                width:17rem;
+                width:19rem;
                 height: 2.5rem;
                 
               }
@@ -265,6 +268,9 @@
               }
               [class^="bi-"]::before, [class*=" bi-"]::before{
                 vertical-align: 1em;
+              }
+              .Para{
+                max-width: 92%;
               }
               
         }
@@ -288,7 +294,7 @@
             </div>
         </div>
     </div> -->
-    <div class="container mb-5" style="max-width: 78%;">
+    <div class=" container mb-5 Para">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7">
                 <p class="px-3 text-left" style="text-align: justify;">
@@ -300,18 +306,18 @@
     
 
 
-    <div class="container  mb-5 d-flex flex-column flex-md-row justify-content-center align-items-center" style="gap: 2rem; margin-top:-1.5rem;">
+    <div class="container px-0 mb-5 d-flex flex-column flex-md-row justify-content-center align-items-center" style="gap: 2rem; margin-top:-1.5rem;">
         <div>
         <div class="custom-btn d-flex flex-row align-items-center p-3 mb-3 mb-md-0">
             <i class="bi bi-calendar3 me-2"></i>
             <div class="d-flex flex-column">
                 <span class="mb-2 Date" style=" font-weight: 800;">21<sup>st</sup> JULY</span>
                 <span class="Date-bottom" style="font-weight: bold;">SUNDAY | 2024</span>
-                <span class="Date-bottom" style="font-weight: bold;">11AM ONWARDS</span>
+                <span class="Date-bottom" style="font-weight: bold;">11:00AM ONWARDS</span>
             </div>
         </div>
         <div class="btnd d-flex justify-content-center mb-3 py-0 ">
-            <button  class="btn px-4 py-2" onclick="addToCalendar()">ADD TO CALENDER</button>
+            <button  class="btn px-4 py-2" onclick="addToCalendar()">ADD TO CALENDAR</button>
         </div>
     </div>
     <div>
@@ -528,8 +534,8 @@
             const eventTitle = 'Cabriot Eat Soft Launch';
             const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
             const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
-            const startDate = '2024-07-21T18:00:00Z'; // Adjust to your event start date/time
-            const endDate = '2024-07-21T20:00:00Z'; // Adjust to your event end date/time
+            const startDate = '2024-07-21T11:00:00Z'; // Adjust to your event start date/time
+            const endDate = '2024-07-21T02:00:00Z'; // Adjust to your event end date/time
         
             // Construct Google Calendar URL
             const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDate.replace(/-|:|T/g, '')}/${endDate.replace(/-|:|T/g, '')}`;
