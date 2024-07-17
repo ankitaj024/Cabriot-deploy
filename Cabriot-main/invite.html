@@ -630,7 +630,7 @@
             const userAgent = navigator.userAgent;
             if (/iPhone|iPad|iPod/.test(userAgent) || /Macintosh/.test(userAgent)) {
                 // Default to iCalendar for Apple devices
-                downloadICSFile(icsUrl, 'event.ics');
+                openICSFile(icsUrl);
             } else if (/Windows/.test(userAgent)) {
                 // Default to Outlook for Windows users
                 openCalendarLink(outlookCalendarUrl);
@@ -644,6 +644,15 @@
         function openCalendarLink(url) {
             window.open(url, '_blank');
         }
+        
+        // Function to open the .ics file directly
+        function openICSFile(url) {
+            const a = document.createElement('a');
+            a.href = url;
+            a.target = '_blank'; // Open the .ics file in a new tab
+            a.click();
+        }
+        
         
         // Function to download the .ics file
         function downloadICSFile(url, fileName) {
