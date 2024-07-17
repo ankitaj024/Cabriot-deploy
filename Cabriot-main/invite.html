@@ -335,7 +335,7 @@
     </div>
     </div>
     
-    <div id="contactFormSection" class="bg-white" style="padding-top: 2rem; padding-bottom:2rem">
+    <div id="contactFormSection" class="bg-white" style="padding-bottom:2rem">
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row justify-content-center w-100">
                 <div class="col-lg-8 text-center form-section">
@@ -343,7 +343,8 @@
                     <form id="contform">
                         <div class="row g-3">
                             <div class="col-md-12 mb-3 px-4 form-floating">
-                                <input type="hidden" name="access_key" value="4217f613-42cd-46f3-aee2-bdb36e40db7b">
+                                <!-- <input type="hidden" name="access_key" value="4217f613-42cd-46f3-aee2-bdb36e40db7b"> -->
+                                <input type="hidden" name="access_key" value="4e5b4272-5b9d-4416-b003-33222f139313">
                                 <input type="text" name="name" id="Full_name"
                                     class="form-control form2 Place rounded-3 " placeholder="" required>
                                 <label style="padding-left: 2.5rem;padding-top: 1.2rem; font-size:1rem; font-family: 'Poppins', sans-serif; ;" for="Full_name">Name</label>
@@ -521,10 +522,10 @@
                 .then(function() {
                     // Reset form and hide result after 3 seconds
                     contform.reset();
-                    setTimeout(() => {
-                        formresult.style.display = "none";
+                    //setTimeout(() => {
+                      //  formresult.style.display = "none";
                        // modalBody.style.display = "block";
-                    }, 3000);
+                    //}, 3000);
                 });
         });
 
