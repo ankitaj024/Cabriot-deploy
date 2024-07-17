@@ -376,7 +376,7 @@
         <div class="container d-flex justify-content-center align-items-center">
             <div class="row justify-content-center w-100">
                 <div class="col-lg-8 text-center form-section">
-                    <h2 class="display-6 py-6 mt-5 fw-semibold mb-5"> RSVP to Reserve Your Spot</span>&#33;</h2>
+                    <h2 class="display-6 py-6 mt-5 fw-bold mb-5" style="color: #00BF63; font-weight:750px"> RSVP to Reserve Your Spot</span>&#33;</h2>
                     <form id="contform">
                         <div class="row g-3">
                             <div class="col-md-12 mb-3 px-4 form-floating">
@@ -413,7 +413,7 @@
                                     oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '');">
                                 <label
                                     style="padding-left: 2.5rem; padding-top: 1.2rem; font-size:1rem; padding-bottom:2rem; font-family: 'Poppins', sans-serif; ;"
-                                    for="no_of_guest">Number Of Guests </label>
+                                    for="no. of guest">Number Of Guests </label>
                             </div>
 
                             <div class="d-none" id="submitSuccessMessage">
@@ -497,7 +497,7 @@
             <img src="./assets/img/first-mess-app.png" alt="Left Image" class="footer-image">
         </div>
         <div class="footer-right">
-            <h5 class="mb-3"> Certified Modern kitchen with <br> Advance Automations</h5>
+            <h5 class="mb-3" > Certified Modern kitchen <br> with Advance Automations</h5>
             <div class="images mt-3">
                 <img src="./assets/img/4.png" alt="Image 1" class="footer-small-images">
                 <img src="./assets/img/5.png" alt="Image 2" class="footer-small-images">
@@ -544,7 +544,15 @@
                 .then(async (response) => {
                     let jsonResponse = await response.json();
                     if (response.status == 200) {
-                        formresult.innerHTML = "<strong>Thank You for Your RSVP!</strong> <br> <br>    We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there!";
+
+                        formresult.innerHTML = `
+                       <h5 class="mb-3 style= "font-family: 'Poppins', sans-serif;">Thank You for Your RSVP!</h5>
+                <p class="container mt-1 d-flex justify-content-center align-items-center text-center" style="font-size:1rem; font-family: 'Poppins', sans-serif; font-style:Normal;">
+                    We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there! Make it a 'day' to remember 
+                </p>
+            `;
+
+                        //formresult.innerHTML = "<strong>Thank You for Your RSVP!</strong> <br> <br>    We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there!";
                         contform.style.display = "none"
                         // modalBody.style.display = "none";
                         // result.innerHTML = `
@@ -576,7 +584,7 @@
 
         function addToCalendar() {
             // Define event details
-            const eventTitle = 'Cabriot Eat Soft Launch';
+            const eventTitle = 'Cabriot Eat - Soft Launch at Calicut';
             const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
             const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
 
