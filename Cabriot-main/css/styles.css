@@ -77,7 +77,7 @@
 
 @font-face {
   font-family: 'MyCustomFont'; /* Name you choose for the font */
-  src: url('../fonts/Fontspring-DEMO-singel-regular.otf') format('opentype'); /* Adjust the path */
+  src: url('../fonts/Fontspring-DEMO-singel-bookitalic.otf') format('opentype'); /* Adjust the path */
   font-weight: 500; /* Specify weight if necessary */
   font-style: italic; /* Specify style (normal, italic, etc.) */
 }
