@@ -579,14 +579,20 @@
             const eventTitle = 'Cabriot Eat Soft Launch';
             const eventLocation = '19/87 EAST KALLAI ROAD CHALAPURAM PO, 673002, CALICUT';
             const eventDescription = 'Be a part of Cabriot Eat vibrant journey as we launch our first kitchen in Calicut! Enjoy an exclusive kitchen tour and fun interactions with our team. Lets make it a night to remember!';
-            const startDate = '2024-07-21T05:30:00Z'; // 11:00 AM IST corresponds to 5:30 AM UTC
-            const endDate = '2024-07-21T07:30:00Z'; // 1:00 PM IST corresponds to 7:30 AM UTC
+
+            // Create dates in IST
+            const startDateIST = new Date('2024-07-21T11:00:00+05:30');
+            const endDateIST = new Date('2024-07-21T13:00:00+05:30');
+
+            // Format dates for Google Calendar (YYYYMMDDTHHMMSSZ)
+            const startDateGoogle = startDateIST.toISOString().replace(/-|:|\.\d{3}/g, '');
+            const endDateGoogle = endDateIST.toISOString().replace(/-|:|\.\d{3}/g, '');
 
             // Construct Google Calendar URL
-            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDate.replace(/-|:|T/g, '')}/${endDate.replace(/-|:|T/g, '')}`;
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&details=${encodeURIComponent(eventDescription)}&dates=${startDateGoogle}/${endDateGoogle}`;
 
             // Construct Outlook Calendar URL
-            const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&body=${encodeURIComponent(eventDescription)}&startdt=${startDate}&enddt=${endDate}`;
+            const outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&subject=${encodeURIComponent(eventTitle)}&location=${encodeURIComponent(eventLocation)}&body=${encodeURIComponent(eventDescription)}&startdt=${startDateIST.toISOString()}&enddt=${endDateIST.toISOString()}`;
 
             // Check for the user's default calendar preference
             const userAgent = navigator.userAgent;
