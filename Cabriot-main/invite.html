@@ -221,7 +221,9 @@
             gap: 2rem;
             margin-bottom: 3em;
         }
-
+        .form-para{
+            max-width: 50%;
+        }
         @media (max-width:500px) {
 
             .content h1 {
@@ -305,6 +307,9 @@
                 margin-top: -2rem;
                 gap: 1.5rem;
                 margin-bottom: 1.5em;
+            }
+            .form-para{
+                max-width: 81%;
             }
         }
     </style>
@@ -408,12 +413,12 @@
                             </div>
 
                             <div class="col-md-12 mb-3 px-4 form-floating">
-                                <input type="number" name="no_of_guest" id="no_of_guest"
+                                <input type="number" name="No. of Guest" id="no_of_guest"
                                     class="form-control Place rounded-3" placeholder="" required min="1"
                                     oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/^0+/, '');">
                                 <label
                                     style="padding-left: 2.5rem; padding-top: 1.2rem; font-size:1rem; padding-bottom:2rem; font-family: 'Poppins', sans-serif; ;"
-                                    for="no. of guest">Number Of Guests </label>
+                                    for="no_of_guest">Number Of Guests </label>
                             </div>
 
                             <div class="d-none" id="submitSuccessMessage">
@@ -547,8 +552,8 @@
                     if (response.status == 200) {
 
                         formresult.innerHTML = `
-                       <h5 class="mb-3 style= "font-family: 'Poppins', sans-serif;">Thank You for Your RSVP!</h5>
-                <p class="container mt-1 d-flex justify-content-center align-items-center text-center" style="font-size:1rem; font-family: 'Poppins', sans-serif; font-style:Normal;">
+                       <h5 class="mb-3 style= "font-family: 'Poppins';">Thank You for Your RSVP!</h5>
+                <p class="form-para container mt-1 d-flex justify-content-center align-items-center text-center" style="font-size:1rem; font-family: 'Poppins'; font-style:Normal;">
                     We look forward to celebrating with you on July 19th in Calicut. Get ready to experience the future of dining with Cabriot Eat. See you there! Make it a 'day' to remember 
                 </p>
             `;
