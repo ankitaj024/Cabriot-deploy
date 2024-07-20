@@ -87,7 +87,7 @@
             <div class="vertical-line">
                 <div class="d-flex flex-column align-items-bottom mt-3 px-5">
                     <h3 class="mb-1" style=" font-size:1.3rem">MEAL</h3>
-                    <h2 style="color: white;">BREAKFAST</h2>
+                    <h2 style="color: white;" id="heading">BREAKFAST</h2>
                 </div>
             </div>
             <div class="vertical-line">
@@ -373,6 +373,7 @@
         // Function to update the date
         function updateDate() {
             const now = new Date();
+           
             const options = { weekday: 'long', month: 'long', day: 'numeric' };
             const formattedDate = now.toLocaleDateString(undefined, options);
 
@@ -387,6 +388,8 @@
         // Function to update the time
         function updateTime() {
             const now = new Date();
+            const hours = now.getHours();
+            const head = document.getElementById('heading')
             const formattedTime = now.toLocaleTimeString();
             timeElement.textContent = formattedTime;
         }
