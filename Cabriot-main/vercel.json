@@ -6,7 +6,8 @@
       { "source": "/xpress", "destination": "/xpress.html" },
       { "source": "/", "destination": "/index.html" },
       { "source": "/display/vegetable", "destination": "/display/display.html" },
-      { "source": "/display/main", "destination": "/display/Main.html" }
+      { "source": "/display/main", "destination": "/display/Main.html" },
+      { "source": "/display/bread", "destination": "/display/bread.html" }
 
     ]
   }
