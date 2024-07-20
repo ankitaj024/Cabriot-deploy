@@ -6,7 +6,7 @@
       { "source": "/xpress", "destination": "/xpress.html" },
       { "source": "/", "destination": "/index.html" },
       { "source": "/display/vegetable", "destination": "/display/display.html" },
-      { "source": "/launch", "destination": "/launch.html" }
+      { "source": "/display/Mainsection", "destination": "/display/Main.html" }
 
     ]
   }
