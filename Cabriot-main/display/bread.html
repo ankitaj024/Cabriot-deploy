@@ -9,7 +9,7 @@
     <meta name="description"
         content="Experience Cabriot, India's first mess app offering corporate bulk meals, tailored stays, and a suite of lifestyle solutions. Sign up for early access and step into the future of convenience.">
     <meta name="robots" content="noindex">
-    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon_io/favicon.ico" />
     <meta name="googlebot" content="noindex">
     <title>Cabriot - India's First Mess App, Corporate Bulk Meals, Tailored Stays, and More</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon_io/android-chrome-512x512.png" />
@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
     <style>
         .card-footer {
             background-color: #2ECC71;
@@ -73,23 +73,21 @@
 </head>
 
 <body class="overflow-hidden">
-
-
     <!-- Navigation -->
     <nav class="container d-flex justify-content-between navbar navbar-expand-lg navbar static-top"
         style="background-color: #2ECC71; height: 15vh; max-width: 100% ">
         <a style="height: 90%; " class="navbar-brand px-4" href="#">
-            <img src="./assets/img/cabriot_eat.svg" alt="..." height="100%" width="100%">
+            <img src="../assets/img/cabriot_eat.svg" alt="..." height="100%" width="100%">
         </a>
         <div class="d-flex">
             <div class="d-flex flex-column align-items-bottom mt-3 px-5">
                 <h3 class="mb-1" style=" font-size:1.3rem">SECTION</h3>
-                <h2 style="color: white;">BREAD</h2>
+                <h2 style="color: white;">VEGETABLE</h2>
             </div>
             <div class="vertical-line">
                 <div class="d-flex flex-column align-items-bottom mt-3 px-5">
                     <h3 class="mb-1" style=" font-size:1.3rem">MEAL</h3>
-                    <h2 style="color: white;">BREAKFAST</h2>
+                    <h2 style="color: white;" id="heading">BREAKFAST</h2>
                 </div>
             </div>
             <div class="vertical-line">
@@ -107,178 +105,178 @@
     <div class="px-4 mx-auto "
         style="max-width: 100%; padding: 0; background-color:#231F20;height: 85vh; display:flex; align-items:center ">
         <div class="row ">
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            <div id="card1" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100 ">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20"
                         class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/Poratto.jpeg" alt="Tomato" width="25%"
+                        <img id="card-image1" class="rounded-circle " src="../assets/img/onion.jpg" alt="Tomato" width="25%"
                             height="auto">
-                        <h3 class="card-title px-3">Porotta</h3>
+                        <h3 id="card-title1" class="card-title px-3">Puttu</h3>
                     </div>
-                    <div style="color: #231F20; font-size:2rem;" class="card-footer">
+                    <div id="card-footer" style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">0</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value1" style="font-size: 2.7rem;">100</span>
+                            <span id="card-parameter1" style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1 ">
+             <div id="card2" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1 ">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20"
                         class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/Chappathi.webp" alt="Tomato" width="25%"
+                        <img id="card-image2" class="rounded-circle " src="../assets/img/potato.webp" alt="Tomato" width="25%"
                             height="auto">
-                        <h3 class="card-title px-3">Chappathi</h3>
+                        <h3 id="card-title2" class="card-title px-3">Idly</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">100</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value2" style="font-size: 2.7rem;">10</span>
+                            <span id="card-parameter2" style="font-size: 1.3rem; margin-left: 10px;">Kilograms</span>
                         </div>
                     </div>
                 </div>
             </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1 ">
+              <div id="card3" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1 ">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/carrot.webp" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Poori</h3>
+                        <img id="card-image3" class="rounded-circle " src="../assets/img/carrot.webp" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title3" class="card-title px-3">Carrot</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">200</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value3" style="font-size: 2.7rem;">05</span>
+                            <span id="card-parameter3" style="font-size: 1.3rem; margin-left: 10px;">Kilograms</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            <div id="card4" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/dosa2.jpg" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Dosa Normal</h3>
+                        <img id="card-image4" class="rounded-circle " src="../assets/img/b.webp" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title4" class="card-title px-3">Beans</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">200</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value4" style="font-size: 2.7rem;">02</span>
+                            <span id="card-parameter4" style="font-size: 1.3rem; margin-left: 10px;">Kilograms</span>
                         </div>
                     </div>
                 </div>
-            </div> 
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            </div>  
+             <div id="card5" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/thalu dosa.jpg" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Thattu Dosa</h3>
+                        <img id="card-image5" class="rounded-circle " src="../assets/img/chilly.webp" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title5" class="card-title px-3">Green Chilly</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">200</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value5" style="font-size: 2.7rem;">01</span>
+                            <span id="card-parameter5" style="font-size: 1.3rem; margin-left: 10px;">Kilograms</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            <div id="card6" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20"class="card-body d-flex align-items-center  ">
-                        <img class="rounded-circle " src="./assets/img/neer-dosa.jp" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Neer Dosa</h3>
+                        <img id="card-image6" class="rounded-circle " src="../assets/img/ginger2.webp" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title6" class="card-title px-3">Ginger</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">100</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value6" style="font-size: 2.7rem;">500</span>
+                            <span id="card-parameter6" style="font-size: 1.3rem; margin-left: 10px;">Grams</span>
                         </div>
                     </div>
                 </div>
             </div> 
-             <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+              <div id="card7" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/garlic.webp" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Ari Dosa</h3>
+                        <img id="card-image7" class="rounded-circle " src="../assets/img/garlic.webp" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title7" class="card-title px-3">Garlic</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">100</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Nos.</span>
+                            <span id="card-value7" style="font-size: 2.7rem;">500</span>
+                            <span id="card-parameter7" style="font-size: 1.3rem; margin-left: 10px;">Grams</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            <div id="card8" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/d2.jpg" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Dhanya</h3>
+                        <img id="card-image8" class="rounded-circle " src="../assets/img/d2.jpg" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title8" class="card-title px-3">Dhanya</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">500</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Grams</span>
+                            <span id="card-value8" style="font-size: 2.7rem;">500</span>
+                            <span id="card-parameter8" style="font-size: 1.3rem; margin-left: 10px;">Grams</span>
                         </div>
                     </div>
                 </div>
             </div> 
-            <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            <div id="card9" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center  ">
-                        <img class="rounded-circle " src="./assets/img/curryleaves.webp" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Curry Leaves</h3>
+                        <img id="card-image9" class="rounded-circle " src="../assets/img/curryleaves.webp" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title9" class="card-title px-3">Curry Leaves</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">500</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Grams</span>
+                            <span id="card-value9" style="font-size: 2.7rem;">500</span>
+                            <span id="card-parameter9" style="font-size: 1.3rem; margin-left: 10px;">Grams</span>
                         </div>
                     </div>
                 </div>
-            </div>  -->
-             <!-- <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            </div> 
+              <div id="card10" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Tomato 10</h3>
+                        <img id="card-image10" class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title10" class="card-title px-3">Tomato 10</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">230</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Numbers</span>
+                            <span id="card-value10" style="font-size: 2.7rem;">230</span>
+                            <span id="card-parameter10" style="font-size: 1.3rem; margin-left: 10px;">Numbers</span>
                         </div>
                     </div>
                 </div>
-            </div> -->
-             <!--<div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+            </div> 
+             <div id="card11" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Tomato 11</h3>
+                        <img id="card-image11" class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title11" class="card-title px-3">Tomato 11</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">230</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Numbers</span>
+                            <span id="card-value11" style="font-size: 2.7rem;">230</span>
+                            <span id="card-parameter11" style="font-size: 1.3rem; margin-left: 10px;">Numbers</span>
                         </div>
                     </div>
                 </div>
             </div>
-             <div class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
+             <div id="card12" class="col-lg-3 col-md-4 col-sm-6 px-2 mb-4 mt-1">
                 <div class="card h-100">
                     <div style="color: white;border: 2.5px solid white; border-bottom:none; border-radius:8px;background-color:#231F20" class="card-body d-flex align-items-center ">
-                        <img class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
-                        <h3 class="card-title px-3">Tomato 12</h3>
+                        <img id="card-image12" class="rounded-circle " src="./assets/img/c_green (1).svg" alt="Tomato" width="25%" height="auto">
+                        <h3 id="card-title12" class="card-title px-3">Tomato 12</h3>
                     </div>
                     <div style="color: #231F20; font-size:2rem;" class="card-footer">
                         <div style="display: flex; align-items: baseline; padding-left:6rem">
-                            <span style="font-size: 2.7rem;">230</span>
-                            <span style="font-size: 1.3rem; margin-left: 10px;">Numbers</span>
+                            <span id="card-value12" style="font-size: 2.7rem;">230</span>
+                            <span id="card-parameter12" style="font-size: 1.3rem; margin-left: 10px;">Numbers</span>
                         </div>
                     </div>
-                </div> -->
-        </div>
+                </div> 
+        </div> 
     </div>
     </div>
     <!-- /.row -->
@@ -389,8 +387,94 @@
         // Function to update the time
         function updateTime() {
             const now = new Date();
+            const hours = now.getHours();
             const formattedTime = now.toLocaleTimeString();
             timeElement.textContent = formattedTime;
+            const head = document.getElementById('heading')
+    
+    
+    // Update content based on time
+     if (hours >= 13 && hours < 18) {
+        document.getElementById('card8').style.display = 'none';
+        document.getElementById('card9').style.display = 'none';
+        document.getElementById('card10').style.display = 'none';
+        document.getElementById('card11').style.display = 'none';
+        document.getElementById('card12').style.display = 'none';
+        head.textContent = "DINNER"
+        document.getElementById('card-title1').textContent = 'Porotta';
+        document.getElementById('card-image1').src = '../assets/img/baji.webp'; // replace with new image path
+        document.getElementById('card-value1').textContent = '0';
+        document.getElementById('card-parameter1').textContent = 'Nos.';
+        document.getElementById('card-title2').textContent = 'Dal fry';
+        document.getElementById('card-image2').src = '../assets/img/dalfry.jpg'; // replace with new image path
+        document.getElementById('card-value2').textContent = '0';
+        document.getElementById('card-parameter2').textContent = 'Kilogram';
+        document.getElementById('card-title3').textContent = 'Soya bean curry';
+        document.getElementById('card-image3').src = '../assets/img/soyacurry.webp'; // replace with new image path
+        document.getElementById('card-value3').textContent = '5';
+        document.getElementById('card-parameter3').textContent = 'Kilogram';
+        document.getElementById('card-title4').textContent = 'Chicken curry';
+        document.getElementById('card-image4').src = '../assets/img/chicken.webp'; // replace with new image path
+        document.getElementById('card-value4').textContent = '10';
+        document.getElementById('card-parameter4').textContent = 'Kilogram';
+        document.getElementById('card-title5').textContent = 'Fish curry';
+        document.getElementById('card-image5').src = '../assets/img/fish.jpg'; // replace with new image path
+        document.getElementById('card-value5').textContent = '0';
+        document.getElementById('card-parameter5').textContent = 'Kilogram';
+        document.getElementById('card-title6').textContent = 'Veg Fried rice';
+        document.getElementById('card-image6').src = '../assets/img/vegfried.jpg'; // replace with new image path
+        document.getElementById('card-value6').textContent = '10';
+        document.getElementById('card-parameter6').textContent = 'Kilogram';
+        document.getElementById('card-title7').textContent = 'Jeera rice';
+        document.getElementById('card-image7').src = '../assets/img/jeera-rice2.webp'; // replace with new image path
+        document.getElementById('card-value7').textContent = '0';
+        document.getElementById('card-parameter7').textContent = 'Kilogram';
+    }
+     else {
+        document.getElementById('card9').style.display = 'none';
+        document.getElementById('card10').style.display = 'none';
+        document.getElementById('card11').style.display = 'none';
+        document.getElementById('card12').style.display = 'none';
+        head.textContent = "BREAKFAST"
+        document.getElementById('card-title1').textContent = 'Puttu';
+        document.getElementById('card-image1').src = '../assets/img/puttu.webp'; // replace with new image path
+        document.getElementById('card-value1').textContent = '100';
+        document.getElementById('card-parameter1').textContent = 'Nos.';
+        document.getElementById('card-title2').textContent = 'Idly';
+        document.getElementById('card-image2').src = '../assets/img/idly.webp'; // replace with new image path
+        document.getElementById('card-value2').textContent = '300';
+        document.getElementById('card-parameter2').textContent = 'Nos.';
+        document.getElementById('card-title3').textContent = 'Upumavu';
+        document.getElementById('card-image3').src = '../assets/img/upma.avif'; // replace with new image path
+        document.getElementById('card-value3').textContent = '10';
+        document.getElementById('card-parameter3').textContent = 'Kilogram';
+        document.getElementById('card-title4').textContent = 'Baaji';
+        document.getElementById('card-image4').src = '../assets/img/baji.webp'; // replace with new image path
+        document.getElementById('card-value4').textContent = '10';
+        document.getElementById('card-parameter4').textContent = 'Kilogram';
+        document.getElementById('card-title5').textContent = 'Veg Masala curry';
+        document.getElementById('card-image5').src = '../assets/img/vegcurry.jpg'; // replace with new image path
+        document.getElementById('card-value5').textContent = '10';
+        document.getElementById('card-parameter5').textContent = 'Kilogram';
+        document.getElementById('card-title6').textContent = 'Egg curry';
+        document.getElementById('card-image6').src = '../assets/img/egg.jpg'; // replace with new image path
+        document.getElementById('card-value6').textContent = '0';
+        document.getElementById('card-parameter6').textContent = 'Kilogram';
+        document.getElementById('card-title7').textContent = 'Kadala curry';
+        document.getElementById('card-image7').src = '../assets/img/Kadala.webp'; // replace with new image path
+        document.getElementById('card-value7').textContent = '0';
+        document.getElementById('card-parameter7').textContent = 'Kilogram';
+        document.getElementById('card-title8').textContent = 'Sambar';
+        document.getElementById('card-image8').src = '../assets/img/Sambar.jpg'; // replace with new image path
+        document.getElementById('card-value8').textContent = '10';
+        document.getElementById('card-parameter8').textContent = 'Kilogram';
+        document.getElementById('card-title9').textContent = 'Chutney';
+        document.getElementById('card-image9').src = '../assets/img/chutney.jpg'; // replace with new image path
+        document.getElementById('card-value9').textContent = '10';
+        document.getElementById('card-parameter9').textContent = 'Kilogram';
+        
+    }
+            
         }
 
         // Update the date and time initially and then every second
